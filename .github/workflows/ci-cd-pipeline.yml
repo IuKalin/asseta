@@ -1,0 +1,56 @@
+name: CI/CD Build & Test Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  backend-test:
+    name: Backend .NET 8 Test & Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Restore Backend
+        run: dotnet restore backend/Asseta.sln
+      - name: Build Backend
+        run: dotnet build backend/Asseta.sln --no-restore
+      - name: Test Backend
+        run: dotnet test backend/Asseta.sln --no-build --verbosity normal
+
+  frontend-test:
+    name: Frontend Web Lint & Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install & Build Web
+        run: |
+          cd frontend-web
+          npm ci || npm install
+          npm run build
+
+  mobile-test:
+    name: Flutter Mobile Analyze & Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.41.9'
+          channel: 'stable'
+      - name: Analyze & Test Mobile
+        run: |
+          cd mobile-app
+          flutter pub get
+          flutter analyze --no-fatal-infos
+          flutter test

@@ -1,0 +1,34 @@
+name: Constitution & SDD Compliance Check
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  sdd-audit:
+    name: SDD Single Source of Truth Validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Verify Constitution & Specs Exist
+        run: |
+          test -f .sdd/constitution.md || (echo "Missing .sdd/constitution.md" && exit 1)
+          test -f .sdd/shared_context.md || (echo "Missing .sdd/shared_context.md" && exit 1)
+          test -f .sdd/constraints/tech_stack.md || exit 1
+          test -f .sdd/constraints/business_rules.md || exit 1
+          test -f .sdd/constraints/safety.md || exit 1
+          echo "SDD Core structure validated!"
+
+      - name: Verify Feature 01 Approved Status
+        run: |
+          grep -q "v1.0.0 APPROVED" .sdd/specs/feat-01-continuity-map/SPEC.md || (echo "feat-01 must be APPROVED" && exit 1)
+          echo "feat-01 continuity map is APPROVED v1.0.0"
+
+      - name: Secret Leak Scan
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

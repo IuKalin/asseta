@@ -1,0 +1,10 @@
+# Ignored files for AI agents
+**/*.log
+**/bin/**
+**/obj/**
+**/node_modules/**
+**/.dart_tool/**
+**/docker/postgres/data/**
+**/*.key
+**/*.pem
+**/.env*

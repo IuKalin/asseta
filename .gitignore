@@ -1,0 +1,35 @@
+# Build outputs
+bin/
+obj/
+dist/
+build/
+.dart_tool/
+.packages
+
+# Dependencies
+node_modules/
+packages/
+
+# Environment and Secrets
+*.env
+*.env.local
+*.env.production
+appsettings.*.json
+!appsettings.json
+!appsettings.Development.json
+secrets/
+*.pem
+*.key
+
+# IDE & OS
+.idea/
+.vscode/
+*.suo
+*.user
+.DS_Store
+Thumbs.db
+
+# Logs & Docker
+logs/
+*.log
+docker/postgres/data/
