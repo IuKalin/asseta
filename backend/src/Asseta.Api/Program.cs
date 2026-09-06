@@ -89,11 +89,15 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = "swagger";
 });
 
+// Phục vụ giao diện React (Airbnb Style) từ thư mục wwwroot
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 
-app.MapGet("/", () => new
+app.MapGet("/health", () => new
 {
     service = "Asseta.Api",
     version = "1.0.0",
@@ -101,6 +105,9 @@ app.MapGet("/", () => new
     sddSpec = "feat-01-continuity-map (v1.0.0 APPROVED)",
     swagger = "/swagger"
 });
+
+// SPA Route Fallback: Mọi route client-side (như /login, /register, v.v.) tự động trả về index.html (tránh 404)
+app.MapFallbackToFile("index.html");
 
 // Auto-initialize PostgreSQL Database schema & seed data if DB is accessible
 using (var scope = app.Services.CreateScope())
