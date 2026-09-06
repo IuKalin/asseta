@@ -7,4 +7,6 @@
 **/docker/postgres/data/**
 **/*.key
 **/*.pem
-**/.env*
+**/.env/*
+
+

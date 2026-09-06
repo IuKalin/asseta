@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Asseta Continuity - Action Cards (Thẻ Tiếp Quản &amp; Ngữ Cảnh Xử Lý)</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Forms and Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed-variant": "#6e3900",
+            "on-tertiary-fixed": "#2f1500",
+            "on-background": "#111c2d",
+            "primary-container": "#131a33",
+            "on-secondary-container": "#006f66",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed-variant": "#005049",
+            "tertiary": "#000000",
+            "background": "#f9f9ff",
+            "on-error": "#ffffff",
+            "secondary-fixed": "#89f5e7",
+            "surface": "#f9f9ff",
+            "on-secondary-fixed": "#00201d",
+            "surface-dim": "#cfdaf2",
+            "tertiary-container": "#2f1500",
+            "on-secondary": "#ffffff",
+            "outline": "#76767e",
+            "primary": "#000000",
+            "secondary-fixed-dim": "#6bd8cb",
+            "on-surface": "#111c2d",
+            "on-primary-fixed": "#131a33",
+            "outline-variant": "#c6c6ce",
+            "surface-tint": "#565d79",
+            "tertiary-fixed-dim": "#ffb77d",
+            "on-tertiary-container": "#c76c00",
+            "surface-container-high": "#dee8ff",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#45464d",
+            "inverse-surface": "#263143",
+            "surface-container": "#e7eeff",
+            "on-primary-fixed-variant": "#3e4660",
+            "surface-container-low": "#f0f3ff",
+            "surface-bright": "#f9f9ff",
+            "error": "#ba1a1a",
+            "inverse-primary": "#bec5e5",
+            "primary-fixed": "#dbe1ff",
+            "error-container": "#ffdad6",
+            "secondary": "#006a61",
+            "surface-container-highest": "#d8e3fb",
+            "surface-variant": "#d8e3fb",
+            "inverse-on-surface": "#ecf1ff",
+            "primary-fixed-dim": "#bec5e5",
+            "surface-container-lowest": "#ffffff",
+            "on-primary": "#ffffff",
+            "tertiary-fixed": "#ffdcc3",
+            "on-primary-container": "#7b83a0",
+            "secondary-container": "#86f2e4"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "layout-margin-mobile": "1rem",
+            "space-lg": "1.5rem",
+            "space-3xl": "4rem",
+            "space-xl": "2rem",
+            "layout-margin-desktop": "2rem",
+            "space-2xs": "0.125rem",
+            "space-md": "0.75rem",
+            "gutter-mobile": "1rem",
+            "layout-margin-tablet": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-2xl": "3rem",
+            "space-base": "1rem",
+            "space-sm": "0.5rem",
+            "gutter-desktop": "1.5rem",
+            "max-width-content": "80rem"
+          },
+          "fontFamily": {
+            "title-md": ["Inter"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "label-md": ["Inter"],
+            "body-lg": ["Inter"],
+            "body-md": ["Inter"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "display-sm": ["Plus Jakarta Sans"],
+            "body-sm": ["Inter"],
+            "title-sm": ["Inter"],
+            "label-sm": ["Inter"]
+          },
+          "fontSize": {
+            "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+            "display-sm": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" }],
+            "title-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #c6c6ce;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased flex h-screen overflow-hidden select-none">
+<!-- ========================================================================= -->
+<!-- SIDE NAVIGATION (Shared Component: SideNavBar)                            -->
+<!-- ========================================================================= -->
+<aside class="fixed top-0 left-0 h-screen w-64 border-r border-outline-variant bg-surface-container-lowest z-30 flex flex-col justify-between p-4 shadow-none">
+<!-- Top Header / Monogram Seal -->
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3 px-2 pt-2">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+<div class="flex flex-col">
+<span class="text-title-md font-title-md font-bold text-on-surface tracking-tight">Asseta Continuity</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            256-bit AES Encrypted
+          </span>
+</div>
+</div>
+<!-- Main Navigation Menu items -->
+<nav aria-label="Main Navigation" class="flex flex-col gap-1.5">
+<!-- Item 1: Continuity Map (Inactive) -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]">account_tree</span>
+<span>Continuity Map</span>
+</a>
+<!-- Item 2: Action Cards (ACTIVE TAB - matching page intent) -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface bg-surface-container font-title-sm text-title-sm rounded-lg border-l-2 border-secondary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px] text-secondary" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+<span>Action Cards</span>
+</a>
+<!-- Item 3: Trusted People (Inactive) -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]">group</span>
+<span>Trusted People</span>
+</a>
+<!-- Item 4: Continuity Plan (Inactive) -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]">description</span>
+<span>Continuity Plan</span>
+</a>
+<!-- Item 5: Emergency Handover Mode (Inactive) -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]">lock_clock</span>
+<span>Emergency Handover Mode</span>
+</a>
+</nav>
+</div>
+<!-- Sidebar Bottom Section -->
+<div class="flex flex-col gap-4 border-t border-outline-variant pt-4">
+<!-- Trigger Protocol CTA -->
+<button class="w-full py-2.5 px-3 bg-surface-container-high hover:bg-surface-variant text-on-surface border border-outline-variant rounded-lg font-title-sm text-title-sm flex items-center justify-center gap-2 transition-colors duration-150">
+<span class="material-symbols-outlined text-[18px] text-error">emergency_home</span>
+<span>Trigger Handover Protocol</span>
+</button>
+<!-- Footer navigation tabs -->
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+<span>Check-in Status</span>
+<span class="ml-auto w-2 h-2 rounded-full bg-secondary"></span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span>Security Settings</span>
+</a>
+</div>
+<!-- Institutional Vault Footnote -->
+<div class="px-3 py-2 bg-surface-container-low rounded-lg border border-outline-variant/60 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm text-on-surface">Institutional Tier</span>
+<span class="text-[10px] text-on-surface-variant">Key Custody: Split-Sign</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+</div>
+</div>
+</aside>
+<!-- ========================================================================= -->
+<!-- MAIN SHELL (Header + Scrollable Canvas)                                   -->
+<!-- ========================================================================= -->
+<div class="ml-64 flex-1 flex flex-col h-screen overflow-hidden">
+<!-- TOP NAVIGATION (Shared Component: TopNavBar) -->
+<header class="sticky top-0 right-0 w-full border-b border-outline-variant bg-surface-container-lowest z-20 flex items-center justify-between px-8 py-3 shadow-sm">
+<!-- Left: Search Box & Product Breadcrumb -->
+<div class="flex items-center gap-6 w-1/3">
+<div class="relative w-full max-w-xs">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full pl-9 pr-3 py-1.5 text-body-sm font-body-sm rounded-lg bg-surface-container-low border border-outline-variant focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary text-on-surface placeholder:text-on-surface-variant" placeholder="Tìm theo tên thẻ, người thụ hưởng, tài sản..." type="text"/>
+</div>
+</div>
+<!-- Center: Nav links from JSON -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-on-surface hover:bg-surface-container-low transition-colors duration-150 px-2 py-1 rounded" href="#">
+          Governance Ledger
+        </a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-on-surface hover:bg-surface-container-low transition-colors duration-150 px-2 py-1 rounded" href="#">
+          Audit Trail
+        </a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-on-surface hover:bg-surface-container-low transition-colors duration-150 px-2 py-1 rounded" href="#">
+          Encrypted Vault
+        </a>
+</div>
+<!-- Right: Action clusters & Profile -->
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1 pr-2 border-r border-outline-variant">
+<button class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors duration-150" title="Notifications">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors duration-150" title="Shield Status">
+<span class="material-symbols-outlined text-[20px]">shield</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors duration-150" title="Help &amp; Documentation">
+<span class="material-symbols-outlined text-[20px]">help_outline</span>
+</button>
+</div>
+<!-- Trailing secondary action -->
+<button class="px-3 py-1.5 bg-surface-container-lowest border border-outline-variant text-on-surface font-title-sm text-title-sm rounded-lg hover:bg-surface-container-low transition-colors duration-150 flex items-center gap-1.5 shadow-none">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+          Export Plan
+        </button>
+<!-- Trailing primary action -->
+<button class="px-3.5 py-1.5 bg-primary text-on-primary font-title-sm text-title-sm rounded-lg hover:bg-primary-container border border-primary transition-colors duration-150 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">lock_open</span>
+          Emergency Handover
+        </button>
+<!-- Profile Avatar Monogram -->
+<div class="w-8 h-8 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center font-title-sm text-title-sm text-on-surface ml-1" title="Executive Founder Avatar">
+          EF
+        </div>
+</div>
+</header>
+<!-- SCROLLABLE WORKSPACE CANVAS -->
+<main class="flex-1 overflow-y-auto custom-scroll p-8 bg-background">
+<div class="max-w-[80rem] mx-auto flex flex-col gap-6">
+<!-- ================================================================= -->
+<!-- HEADER BLOCK                                                      -->
+<!-- ================================================================= -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-outline-variant pb-6">
+<div class="flex flex-col gap-2 max-w-4xl">
+<div class="flex items-center gap-3">
+<h1 class="text-headline-lg font-headline-lg text-on-surface">Thẻ Tiếp Quản (Action Cards)</h1>
+<!-- Badge: Zero-Knowledge Privacy -->
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-container/40 border border-secondary text-secondary text-label-sm font-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Zero-Knowledge Privacy</span>
+</div>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+              Nguyên tắc cốt lõi: Trả lời chính xác 5 câu hỏi vàng cứu nguy cho người thân và cộng sự mà không cần khai báo số dư tài khoản nhạy cảm.
+            </p>
+</div>
+<!-- Quick Actions -->
+<div class="flex items-center gap-3 self-start md:self-auto shrink-0">
+<button class="px-3.5 py-2 bg-surface-container-lowest border border-outline-variant text-on-surface font-title-sm text-title-sm rounded-lg hover:bg-surface-container-low transition-colors duration-150 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+              Xuất bộ thẻ (PDF mã hoá)
+            </button>
+<button class="px-4 py-2 bg-primary text-on-primary font-title-sm text-title-sm rounded-lg hover:bg-primary-container border border-primary transition-colors duration-150 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+              + Tạo Thẻ Hành Động Mới
+            </button>
+</div>
+</div>
+<!-- ================================================================= -->
+<!-- TOOLBAR: Filters, View Toggle, Quick Metrics                      -->
+<!-- ================================================================= -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 py-2">
+<!-- Filter Tabs -->
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-xl border border-outline-variant/60 self-start">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-title-sm text-title-sm shadow-sm border border-outline-variant/40 flex items-center gap-1.5">
+<span>Tất cả</span>
+<span class="text-label-sm font-label-sm px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface">12</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-body-md text-body-md transition-colors flex items-center gap-1.5">
+<span>Khẩn cấp</span>
+<span class="text-label-sm font-label-sm px-1.5 py-0.2 rounded-full bg-error-container text-on-error-container">4</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-body-md text-body-md transition-colors flex items-center gap-1.5">
+<span>Quan trọng</span>
+<span class="text-label-sm font-label-sm px-1.5 py-0.2 rounded-full bg-tertiary-fixed text-on-tertiary-fixed">5</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-body-md text-body-md transition-colors flex items-center gap-1.5">
+<span>Dự phòng</span>
+<span class="text-label-sm font-label-sm px-1.5 py-0.2 rounded-full bg-surface-container-high text-on-surface">3</span>
+</button>
+</div>
+<!-- Secondary Toolbar Controls: Search filter indicator & View Toggle -->
+<div class="flex items-center gap-3">
+<div class="text-label-md font-label-md text-on-surface-variant flex items-center gap-2 mr-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+              100% Thẻ đã định danh người kế thừa
+            </div>
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg border border-outline-variant/60">
+<button class="p-1.5 bg-surface-container-lowest text-on-surface rounded shadow-sm" title="Grid Layout">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface rounded transition-colors" title="List Layout">
+<span class="material-symbols-outlined text-[18px]">view_list</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ================================================================= -->
+<!-- ACTION CARDS WORKSPACE LAYOUT (2 Columns: 1 Expanded + 2 Compact) -->
+<!-- ================================================================= -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- =============================================================== -->
+<!-- CARD 1: DETAILED EXPANDED VIEW (7 Cols)                         -->
+<!-- =============================================================== -->
+<div class="lg:col-span-7 bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm flex flex-col justify-between overflow-hidden">
+<!-- Card Header -->
+<div class="p-6 border-b border-outline-variant/60 bg-surface-container-lowest">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-3">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0 border border-outline-variant/40">
+<span class="material-symbols-outlined text-[24px]">apartment</span>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-error-container text-on-error-container border border-error/20 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                        Khẩn cấp Level 1
+                      </span>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-medium">Bất động sản dòng tiền</span>
+</div>
+<h2 class="text-headline-sm font-headline-sm text-on-surface tracking-tight">
+                      Căn hộ cho thuê Discovery Complex Cầu Giấy
+                    </h2>
+</div>
+</div>
+<!-- Status Chip -->
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/30 border border-secondary text-secondary text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+                  Đã mã hóa
+                </div>
+</div>
+</div>
+<!-- Card Body: 5 Golden Questions Breakdown -->
+<div class="p-6 flex flex-col gap-5 divide-y divide-outline-variant/40">
+<!-- Câu hỏi 1: Bối cảnh & Giá trị -->
+<div class="pt-1 flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-primary-container text-on-primary flex items-center justify-center text-label-sm font-bold">1</span>
+<span class="text-title-sm font-title-sm text-on-surface">Bối cảnh &amp; Giá trị tiếp nhận</span>
+</div>
+<div class="ml-7 bg-surface-container-low p-3.5 rounded-lg border border-outline-variant/50">
+<p class="text-body-md font-body-md text-on-surface leading-normal">
+                    Căn hộ dịch vụ cho thuê <strong class="font-semibold text-on-surface">25 triệu/tháng</strong>, Hợp đồng 2 năm. Nguồn tài chính trọng yếu chi trả chi phí sinh hoạt gia đình cố định hàng tháng.
+                  </p>
+</div>
+</div>
+<!-- Câu hỏi 2: Người chỉ định -->
+<div class="pt-4 flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-primary-container text-on-primary flex items-center justify-center text-label-sm font-bold">2</span>
+<span class="text-title-sm font-title-sm text-on-surface">Người chỉ định tiếp quản chính</span>
+</div>
+<div class="ml-7 flex items-center justify-between p-3 rounded-lg border border-outline-variant/60 bg-surface-container-lowest">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-title-sm font-semibold text-on-surface">
+                      MP
+                    </div>
+<div>
+<div class="text-title-sm font-title-sm text-on-surface">Nguyễn Mai Phương (Vợ)</div>
+<div class="text-label-sm font-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                        Thẩm quyền Cấp 1 (Toàn quyền vận hành)
+                      </div>
+</div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-mono bg-surface-container-low px-2 py-1 rounded">
+                    Key-ID: #892-F1
+                  </span>
+</div>
+</div>
+<!-- Câu hỏi 3: Kế hoạch hành động cụ thể - 3 bước -->
+<div class="pt-4 flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-primary-container text-on-primary flex items-center justify-center text-label-sm font-bold">3</span>
+<span class="text-title-sm font-title-sm text-on-surface">Kế hoạch hành động ngay lập tức (3 Bước)</span>
+</div>
+<div class="ml-7 space-y-2">
+<!-- Step 1 -->
+<div class="flex items-start gap-3 p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/40">
+<span class="text-label-md font-bold px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface border border-outline-variant/60 shrink-0">B1</span>
+<span class="text-body-sm font-body-sm text-on-surface">
+                      Liên hệ anh David (khách thuê ngoại quốc) qua Zalo/WhatsApp để thông báo đại diện quản lý mới và thủ tục ủy quyền.
+                    </span>
+</div>
+<!-- Step 2 -->
+<div class="flex items-start gap-3 p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/40">
+<span class="text-label-md font-bold px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface border border-outline-variant/60 shrink-0">B2</span>
+<span class="text-body-sm font-body-sm text-on-surface">
+                      Thu tiền thuê định kỳ vào ngày 05 hàng tháng qua STK cá nhân (đã đính kèm phụ lục hướng dẫn đổi thông tin thanh toán).
+                    </span>
+</div>
+<!-- Step 3 -->
+<div class="flex items-start gap-3 p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/40">
+<span class="text-label-md font-bold px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface border border-outline-variant/60 shrink-0">B3</span>
+<span class="text-body-sm font-body-sm text-on-surface">
+                      Nộp phí dịch vụ quản lý chung cư định kỳ tại Quầy Lễ tân Tầng 1 Discovery Complex hoặc liên hệ BQL qua hotline.
+                    </span>
+</div>
+</div>
+</div>
+<!-- Câu hỏi 4: Vị trí hồ sơ vật lý & bản số -->
+<div class="pt-4 flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-primary-container text-on-primary flex items-center justify-center text-label-sm font-bold">4</span>
+<span class="text-title-sm font-title-sm text-on-surface">Vị trí hồ sơ &amp; Bản sao lưu</span>
+</div>
+<div class="ml-7 grid grid-cols-1 md:grid-cols-2 gap-2">
+<div class="p-2.5 rounded-lg border border-outline-variant/50 bg-surface-container-lowest flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant shrink-0 mt-0.5">folder</span>
+<div class="flex flex-col">
+<span class="text-label-sm font-semibold text-on-surface">Hồ sơ cứng:</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Tủ tài liệu gỗ phòng làm việc tại nhà, ngăn kéo 2 dán nhãn xanh.</span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg border border-outline-variant/50 bg-surface-container-lowest flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0 mt-0.5">cloud_done</span>
+<div class="flex flex-col">
+<span class="text-label-sm font-semibold text-on-surface">Bản số hoá Scan:</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant font-mono text-[12px]">Google Drive /Assets/DiscoveryComplex/</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Câu hỏi 5: Đầu mối liên hệ khẩn cấp -->
+<div class="pt-4 flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-primary-container text-on-primary flex items-center justify-center text-label-sm font-bold">5</span>
+<span class="text-title-sm font-title-sm text-on-surface">Đầu mối hỗ trợ khẩn cấp (Point of Contact)</span>
+</div>
+<div class="ml-7 flex flex-wrap gap-2">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low border border-outline-variant/60 text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">support_agent</span>
+<span class="text-on-surface font-medium">Anh Hoàng (Môi giới):</span>
+<span class="font-mono text-secondary font-semibold">0912.345.xxx</span>
+</div>
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low border border-outline-variant/60 text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">call</span>
+<span class="text-on-surface font-medium">Ban Quản Lý Tòa Nhà:</span>
+<span class="font-mono text-on-surface">024.3789.xxx</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card Action Bar -->
+<div class="p-4 bg-surface-container-low border-t border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 bg-surface-container-lowest border border-outline-variant text-on-surface font-title-sm text-title-sm rounded-lg hover:bg-surface-container transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+                  Sửa thẻ
+                </button>
+<button class="px-3 py-1.5 bg-surface-container-lowest border border-outline-variant text-on-surface font-title-sm text-title-sm rounded-lg hover:bg-surface-container transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">share</span>
+                  Chia sẻ quyền truy cập
+                </button>
+</div>
+<!-- Test Run Button -->
+<button class="px-4 py-1.5 bg-secondary text-on-secondary font-title-sm text-title-sm rounded-lg hover:bg-secondary/90 transition-colors flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+                Mô phỏng kích hoạt (Test Run)
+              </button>
+</div>
+</div>
+<!-- =============================================================== -->
+<!-- CARDS 2 & 3: ADJACENT CRITICAL ACTION CARDS (5 Cols)            -->
+<!-- =============================================================== -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<!-- CARD 2: Doanh nghiệp - Dòng tiền & Lương TechViet -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm p-6 flex flex-col justify-between hover:border-outline transition-all duration-150">
+<div>
+<!-- Top Badge & Title -->
+<div class="flex items-start justify-between gap-2 mb-3">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-error-container text-on-error-container border border-error/20 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                      Khẩn cấp Doanh nghiệp
+                    </span>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-mono">B02-OP</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mb-4">
+                  Vận hành Dòng tiền &amp; Lương Công ty TechViet Solutions
+                </h3>
+<!-- 5 Golden Answers Summary Grid -->
+<div class="space-y-3">
+<div class="flex items-start gap-2.5">
+<span class="text-label-md font-bold text-on-surface-variant shrink-0 w-4">Q1</span>
+<p class="text-body-sm font-body-sm text-on-surface">
+                      Đảm bảo chi trả lương 32 nhân sự và duy trì hạ tầng máy chủ AWS không bị ngắt quãng.
+                    </p>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="text-label-md font-bold text-on-surface-variant shrink-0 w-4">Q2</span>
+<div class="text-body-sm font-body-sm text-on-surface flex items-center gap-2">
+<span class="font-semibold">Trần Tuấn Anh</span> (Co-founder / Giám đốc Kỹ thuật).
+                    </div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="text-label-md font-bold text-on-surface-variant shrink-0 w-4">Q3</span>
+<p class="text-body-sm font-body-sm text-on-surface">
+                      Kích hoạt quy trình ký duyệt chi lương vào <strong class="font-semibold">ngày 25 hàng tháng</strong> theo bảng tính bảo mật tại phòng Kế toán.
+                    </p>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="text-label-md font-bold text-on-surface-variant shrink-0 w-4">Q4</span>
+<div class="text-body-sm font-body-sm text-on-surface">
+                      Token chữ ký số phụ (CA) lưu tại Két sắt văn phòng Tầng 4, mã két uỷ quyền qua phong bì niêm phong.
+                    </div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="text-label-md font-bold text-on-surface-variant shrink-0 w-4">Q5</span>
+<div class="text-body-sm font-body-sm text-on-surface flex items-center gap-2">
+<span>Kế toán trưởng Chị Lan:</span>
+<span class="font-mono font-semibold text-secondary">0988.123.xxx</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card Mini Footer -->
+<div class="mt-6 pt-4 border-t border-outline-variant/60 flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-label-sm font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+                  Cập nhật 3 ngày trước
+                </div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 text-label-md font-title-sm text-on-surface hover:bg-surface-container rounded border border-outline-variant transition-colors">
+                    Chi tiết
+                  </button>
+<button class="px-2.5 py-1 text-label-md font-title-sm bg-surface-container-high hover:bg-surface-variant text-on-surface rounded transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">play_arrow</span>
+                    Test Run
+                  </button>
+</div>
+</div>
+</div>
+<!-- CARD 3: Tài chính - Khoản vay BIDV -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm p-6 flex flex-col justify-between hover:border-outline transition-all duration-150">
+<div>
+<!-- Top Badge & Title -->
+<div class="flex items-start justify-between gap-2 mb-3">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-tertiary-fixed text-on-tertiary-fixed border border-tertiary-container/30 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-fixed-variant"></span>
+                      Quan trọng (Tín dụng)
+                    </span>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-mono">B03-LN</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mb-4">
+                  Khoản vay hạn mức kinh doanh BIDV Chi nhánh Cầu Giấy
+                </h3>
+<!-- 5 Golden Answers Summary Grid -->
+<div class="space-y-3">
+<div class="flex items-start gap-2.5">
+<span class="text-label-md font-bold text-on-surface-variant shrink-0 w-4">Q1</span>
+<p class="text-body-sm font-body-sm text-on-surface">
+                      Duy trì lịch sử tín dụng doanh nghiệp, tránh nhảy nhóm nợ CIC ảnh hưởng toàn bộ công ty.
+                    </p>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="text-label-md font-bold text-on-surface-variant shrink-0 w-4">Q2</span>
+<div class="text-body-sm font-body-sm text-on-surface">
+                      Phối hợp: <strong class="font-semibold">Nguyễn Mai Phương</strong> &amp; <strong class="font-semibold">Kế toán trưởng</strong>.
+                    </div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="text-label-md font-bold text-on-surface-variant shrink-0 w-4">Q3</span>
+<p class="text-body-sm font-body-sm text-on-surface">
+                      Kiểm tra và duy trì số dư tài khoản thanh toán trước <strong class="font-semibold">ngày 15 hàng tháng</strong> để ngân hàng tự động trích nợ lãi.
+                    </p>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="text-label-md font-bold text-on-surface-variant shrink-0 w-4">Q4</span>
+<div class="text-body-sm font-body-sm text-on-surface">
+                      Túi hồ sơ da màu xám BIDV đặt tại tủ tài liệu cá nhân, bao gồm Khế ước nhận nợ số #4409.
+                    </div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="text-label-md font-bold text-on-surface-variant shrink-0 w-4">Q5</span>
+<div class="text-body-sm font-body-sm text-on-surface flex items-center gap-2">
+<span>Cán bộ tín dụng Anh Vũ:</span>
+<span class="font-mono font-semibold text-secondary">0945.888.xxx</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card Mini Footer -->
+<div class="mt-6 pt-4 border-t border-outline-variant/60 flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-label-sm font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+                  Cập nhật tuần trước
+                </div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 text-label-md font-title-sm text-on-surface hover:bg-surface-container rounded border border-outline-variant transition-colors">
+                    Chi tiết
+                  </button>
+<button class="px-2.5 py-1 text-label-md font-title-sm bg-surface-container-high hover:bg-surface-variant text-on-surface rounded transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">play_arrow</span>
+                    Test Run
+                  </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ================================================================= -->
+<!-- BOTTOM PRIVACY COMMITMENT PANEL                                   -->
+<!-- ================================================================= -->
+<section class="mt-4 p-5 rounded-xl bg-surface-container-lowest border border-outline-variant flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-none">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary shrink-0 border border-outline-variant/40">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h4 class="text-title-md font-title-md text-on-surface">
+                  Cam kết bảo mật phi tài chính (Zero-Balance Declaration)
+                </h4>
+<span class="text-label-sm font-label-sm font-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">
+                  Standard ISO/IEC 27001
+                </span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5 max-w-4xl">
+                Asseta tôn trọng quyền riêng tư tuyệt đối: Hệ thống chỉ lưu trữ hướng dẫn quy trình vận hành và đầu mối pháp lý; tuyệt đối không lưu trữ mật khẩu ngân hàng, OTP, mã PIN hay số dư tài khoản chi tiết của gia đình bạn.
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 self-end md:self-auto">
+<a class="text-title-sm font-title-sm text-secondary hover:underline flex items-center gap-1" href="#">
+<span>Tìm hiểu kiến trúc Zero-Knowledge</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</section>
+</div>
+</main>
+</div>
+</body></html>

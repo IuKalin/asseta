@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Asseta Continuity - Bản đồ Tiếp quản Cá nhân</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed-variant": "#6e3900",
+            "on-tertiary-fixed": "#2f1500",
+            "on-background": "#111c2d",
+            "primary-container": "#131a33",
+            "on-secondary-container": "#006f66",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed-variant": "#005049",
+            "tertiary": "#000000",
+            "background": "#f9f9ff",
+            "on-error": "#ffffff",
+            "secondary-fixed": "#89f5e7",
+            "surface": "#f9f9ff",
+            "on-secondary-fixed": "#00201d",
+            "surface-dim": "#cfdaf2",
+            "tertiary-container": "#2f1500",
+            "on-secondary": "#ffffff",
+            "outline": "#76767e",
+            "primary": "#000000",
+            "secondary-fixed-dim": "#6bd8cb",
+            "on-surface": "#111c2d",
+            "on-primary-fixed": "#131a33",
+            "outline-variant": "#c6c6ce",
+            "surface-tint": "#565d79",
+            "tertiary-fixed-dim": "#ffb77d",
+            "on-tertiary-container": "#c76c00",
+            "surface-container-high": "#dee8ff",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#45464d",
+            "inverse-surface": "#263143",
+            "surface-container": "#e7eeff",
+            "on-primary-fixed-variant": "#3e4660",
+            "surface-container-low": "#f0f3ff",
+            "surface-bright": "#f9f9ff",
+            "error": "#ba1a1a",
+            "inverse-primary": "#bec5e5",
+            "primary-fixed": "#dbe1ff",
+            "error-container": "#ffdad6",
+            "secondary": "#006a61",
+            "surface-container-highest": "#d8e3fb",
+            "surface-variant": "#d8e3fb",
+            "inverse-on-surface": "#ecf1ff",
+            "primary-fixed-dim": "#bec5e5",
+            "surface-container-lowest": "#ffffff",
+            "on-primary": "#ffffff",
+            "tertiary-fixed": "#ffdcc3",
+            "on-primary-container": "#7b83a0",
+            "secondary-container": "#86f2e4"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "layout-margin-mobile": "1rem",
+            "space-lg": "1.5rem",
+            "space-3xl": "4rem",
+            "space-xl": "2rem",
+            "layout-margin-desktop": "2rem",
+            "space-2xs": "0.125rem",
+            "space-md": "0.75rem",
+            "gutter-mobile": "1rem",
+            "layout-margin-tablet": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-2xl": "3rem",
+            "space-base": "1rem",
+            "space-sm": "0.5rem",
+            "gutter-desktop": "1.5rem",
+            "max-width-content": "80rem"
+          },
+          "fontFamily": {
+            "title-md": ["Inter"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "label-md": ["Inter"],
+            "body-lg": ["Inter"],
+            "body-md": ["Inter"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "display-sm": ["Plus Jakarta Sans"],
+            "body-sm": ["Inter"],
+            "title-sm": ["Inter"],
+            "label-sm": ["Inter"]
+          },
+          "fontSize": {
+            "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+            "display-sm": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" }],
+            "title-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex selection:bg-secondary selection:text-on-secondary">
+<!-- ========================================================================= -->
+<!-- SHARED COMPONENT: SideNavBar (Strict Source of Truth implementation)       -->
+<!-- ========================================================================= -->
+<aside class="fixed top-0 left-0 h-screen w-64 border-r border-outline-variant bg-surface-container-lowest z-50 select-none">
+<div class="flex flex-col justify-between h-full p-4 w-64 select-none">
+<!-- Header / Brand identity -->
+<div>
+<div class="flex items-center gap-3 px-2 py-3 mb-6 border-b border-outline-variant">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary font-bold shadow-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-2xl" data-icon="shield">shield</span>
+</div>
+<div class="flex flex-col">
+<span class="text-title-md font-title-md font-bold text-on-surface tracking-tight">Asseta Continuity</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="text-label-md font-label-md text-on-surface-variant font-normal">256-bit AES Encrypted</span>
+</div>
+</div>
+</div>
+<!-- Main Navigation Links -->
+<nav aria-label="Main Navigation" class="space-y-1.5">
+<!-- Active: Continuity Map (Exact Match) -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface bg-surface-container font-title-sm text-title-sm rounded-lg border-l-2 border-secondary hover:bg-surface-container-low transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-secondary" data-icon="account_tree" style="font-variation-settings: 'FILL' 1;">account_tree</span>
+<span>Continuity Map</span>
+</a>
+<!-- Inactive tabs -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-outline" data-icon="task_alt">task_alt</span>
+<span>Action Cards</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-outline" data-icon="group">group</span>
+<span>Trusted People</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-outline" data-icon="description">description</span>
+<span>Continuity Plan</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-outline" data-icon="lock_clock">lock_clock</span>
+<span>Emergency Handover Mode</span>
+</a>
+</nav>
+</div>
+<!-- Footer area & System CTA -->
+<div class="space-y-4 pt-4 border-t border-outline-variant">
+<!-- Emergency Action Trigger -->
+<button class="w-full flex items-center justify-center gap-2 px-3 py-2.5 bg-primary-container text-on-primary hover:bg-inverse-surface rounded-lg transition-colors duration-150 shadow-sm group">
+<span class="material-symbols-outlined text-sm text-secondary-fixed group-hover:scale-110 transition-transform" data-icon="lock_open">lock_open</span>
+<span class="text-label-md font-label-md tracking-normal">Trigger Handover Protocol</span>
+</button>
+<!-- System Settings & Check-in Navigation -->
+<div class="space-y-1">
+<a class="flex items-center justify-between px-3 py-2 text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="verified_user">verified_user</span>
+<span>Check-in Status</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-outline" data-icon="settings">settings</span>
+<span>Security Settings</span>
+</a>
+</div>
+<!-- Monogram Seal & Security State -->
+<div class="flex items-center gap-3 px-2 pt-2 bg-surface-container-low rounded-lg p-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant flex items-center justify-center text-xs font-semibold text-on-surface">
+            HD
+          </div>
+<div class="overflow-hidden text-left">
+<p class="text-label-md font-label-md text-on-surface truncate">Hoàng Đăng (Founder)</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant truncate">Master Key #0081</p>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- ========================================================================= -->
+<!-- MAIN LAYOUT WRAPPER (Offset by SideNav w-64)                              -->
+<!-- ========================================================================= -->
+<div class="pl-64 flex-1 flex flex-col min-w-0">
+<!-- ======================================================================= -->
+<!-- SHARED COMPONENT: TopNavBar                                             -->
+<!-- ======================================================================= -->
+<header class="sticky top-0 right-0 w-full border-b border-outline-variant bg-surface-container-lowest z-40 shadow-sm">
+<div class="flex items-center justify-between px-8 py-3 w-full">
+<!-- Search bar (on_left) -->
+<div class="flex items-center gap-4 flex-1 max-w-md">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low border border-outline-variant pl-10 pr-4 py-1.5 text-body-sm font-body-sm text-on-surface rounded-lg focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-all" placeholder="Tìm kiếm tài sản, người thừa kế, thẻ chỉ dẫn..." type="text"/>
+</div>
+</div>
+<!-- Center In-line Navigation Links -->
+<nav class="hidden lg:flex items-center gap-6 px-6">
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-on-surface hover:bg-surface-container-low transition-colors duration-150 py-1" href="#">
+            Governance Ledger
+          </a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-on-surface hover:bg-surface-container-low transition-colors duration-150 py-1" href="#">
+            Audit Trail
+          </a>
+<a class="text-on-surface font-title-sm text-title-sm border-b-2 border-secondary pb-1" href="#">
+            Encrypted Vault
+          </a>
+</nav>
+<!-- Trailing Actions & Profile -->
+<div class="flex items-center gap-3">
+<!-- Action icons -->
+<div class="flex items-center gap-1 border-r border-outline-variant pr-3 mr-1">
+<button class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors duration-150 relative" title="Notifications">
+<span class="material-symbols-outlined text-xl" data-icon="notifications">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors duration-150" title="Security Health">
+<span class="material-symbols-outlined text-xl" data-icon="shield">shield</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors duration-150" title="Help &amp; Guides">
+<span class="material-symbols-outlined text-xl" data-icon="help_outline">help_outline</span>
+</button>
+</div>
+<!-- Secondary Action -->
+<button class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 bg-surface-container-lowest text-on-surface border border-outline-variant hover:bg-surface-container-low rounded-lg text-title-sm font-title-sm transition-colors duration-150">
+<span class="material-symbols-outlined text-base" data-icon="download">download</span>
+            Export Plan
+          </button>
+<!-- Primary Urgency Action -->
+<button class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-primary-container text-on-primary hover:bg-inverse-surface rounded-lg text-title-sm font-title-sm transition-colors duration-150 shadow-sm">
+<span class="material-symbols-outlined text-sm text-secondary-fixed" data-icon="lock_clock">lock_clock</span>
+            Emergency Handover
+          </button>
+<!-- Profile Avatar -->
+<div class="w-8 h-8 rounded-lg overflow-hidden border border-outline-variant ml-1 flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A refined portrait of a Vietnamese executive tech founder wearing a crisp charcoal suit in a minimalist corporate headquarters with natural soft architectural lighting, symbolizing absolute discretion, authority, and high trust leadership." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMOkhnv8hTVfaTkLRuu_PiNAFF4abpihPaSNi8H8npI19hs3XOqsORkHswRLI2DEGmsYnGu5GckoufaPNJnOtu-9ciWRScGDV6w_OJSoczKTjRyzO9LJlAk-YA9yWOf4DzuIl17_gIqZnWmN-YMjm5SyLzlSfnWNWIqKk53tN-wjXGzhOj5xoE0AEsQqllHB5MYM1zsC6imKM7F8y0s6TR6PKnmfte8-Nv-Qzfw7AAZ5cbUruoydEH"/>
+</div>
+</div>
+</div>
+</header>
+<!-- ======================================================================= -->
+<!-- MAIN WORKSPACE CONTENT CANVAS                                           -->
+<!-- ======================================================================= -->
+<main class="flex-1 max-w-max-width-content w-full mx-auto p-8 space-y-6">
+<!-- 1. Screen Header Section -->
+<section class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-outline-variant">
+<div>
+<div class="flex items-center gap-3">
+<h1 class="text-headline-lg font-headline-lg text-on-surface tracking-tight">
+              Bản đồ Tiếp quản Cá nhân
+            </h1>
+<span class="text-title-sm font-title-sm text-on-surface-variant font-normal hidden sm:inline">(Personal Continuity Map)</span>
+<!-- Status Pill -->
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container text-secondary text-label-sm font-label-sm border border-outline-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Được bảo vệ 256-bit AES
+            </span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-outline" data-icon="update">update</span>
+            Lần đồng bộ hóa gần nhất: <span class="font-medium text-on-surface">Hôm nay lúc 09:30</span> • Mã phiên bảo mật: <span class="font-mono text-xs">AST-2025-081-V4</span>
+</p>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center gap-3 self-start lg:self-auto">
+<button class="inline-flex items-center gap-2 px-3.5 py-2 bg-surface-container-lowest text-on-surface border border-outline-variant hover:bg-surface-container-low rounded-lg text-title-sm font-title-sm transition-all shadow-sm">
+<span class="material-symbols-outlined text-base text-secondary" data-icon="play_circle">play_circle</span>
+            Mô phỏng kích hoạt
+          </button>
+<button class="inline-flex items-center gap-2 px-4 py-2 bg-primary-container text-on-primary hover:bg-inverse-surface rounded-lg text-title-sm font-title-sm transition-all shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span>
+            Check-in Ngay (Còn 18 ngày)
+          </button>
+</div>
+</section>
+<!-- 2. Top Analytics Grid (3-Column Layout) -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Column 1: Overall Continuity Readiness -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-5 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<h2 class="text-title-sm font-title-sm text-on-surface">Chỉ số Sẵn sàng Tiếp quản Tổng thể</h2>
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Readiness Score</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Khả năng tiếp tục vận hành &amp; bàn giao an toàn</p>
+</div>
+<div class="flex items-center gap-6 my-4">
+<!-- SVG Radial Gauge Ring -->
+<div class="relative w-24 h-24 flex items-center justify-center flex-shrink-0">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<!-- Background circle -->
+<path class="text-surface-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<!-- Progress circle (68%) -->
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="68, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-headline-md font-headline-md text-on-surface font-bold">68%</span>
+<span class="text-[10px] text-on-surface-variant uppercase font-semibold">Tạm ổn</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-amber-50 text-amber-800 text-label-sm font-label-sm border border-amber-200">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
+                Dưới ngưỡng chuẩn 80%
+              </div>
+<p class="text-body-sm font-body-sm text-on-surface font-medium pt-1">
+                Cần bổ sung 2 mục quan trọng để đạt 80% an toàn.
+              </p>
+</div>
+</div>
+<div class="pt-3 border-t border-outline-variant/60 flex items-start gap-2 bg-surface-container-low p-2.5 rounded-lg">
+<span class="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5" data-icon="info">info</span>
+<p class="text-label-sm font-label-sm text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface font-semibold">Triết lý Asseta:</strong> Hệ thống không đo đếm tổng giá trị tài sản (Net Worth), mà đo lường <em>tính khả thi và sự thông suốt pháp lý</em> khi gia quyến hay cộng sự phải tiếp quản đột xuất.
+            </p>
+</div>
+</div>
+<!-- Column 2: Continuity Gaps (Alert Card) -->
+<div class="bg-surface-container-lowest border border-amber-300 rounded-xl p-5 shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-amber-100/40 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-600 text-lg" data-icon="warning">warning</span>
+<h2 class="text-title-sm font-title-sm text-amber-900 font-bold">2 Lỗ hổng khẩn cấp (Continuity Gaps)</h2>
+</div>
+<span class="px-2 py-0.5 bg-amber-100 text-amber-800 rounded-full text-label-sm font-label-sm font-semibold">Priority 1</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Nếu có bất trắc y tế xảy ra ngay hôm nay:</p>
+<ul class="mt-3 space-y-2.5">
+<li class="flex items-start gap-2.5 text-body-sm font-body-sm text-on-surface">
+<span class="w-5 h-5 rounded-full bg-amber-100 text-amber-700 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
+<div>
+<strong class="font-semibold text-on-surface">Doanh nghiệp:</strong> Chưa có người ký duyệt ngân sách tạm thời khi nằm viện/cách ly y tế dài hạn.
+                </div>
+</li>
+<li class="flex items-start gap-2.5 text-body-sm font-body-sm text-on-surface">
+<span class="w-5 h-5 rounded-full bg-amber-100 text-amber-700 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
+<div>
+<strong class="font-semibold text-on-surface">Tín dụng:</strong> Khoản vay thế chấp BIDV chưa lưu thông tin hợp đồng và số liên hệ cán bộ thụ lý.
+                </div>
+</li>
+</ul>
+</div>
+<div class="pt-4 mt-2">
+<button class="w-full flex items-center justify-center gap-2 py-2 px-3 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-title-sm font-title-sm transition-colors shadow-sm">
+<span class="material-symbols-outlined text-base" data-icon="build">build</span>
+              Khắc phục ngay 2 lỗ hổng
+            </button>
+</div>
+</div>
+<!-- Column 3: AI Assistant Predictive Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-5 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="psychology">psychology</span>
+<h2 class="text-title-sm font-title-sm text-on-surface font-semibold">Gợi ý từ Trợ lý AI (Asseta AI)</h2>
+</div>
+<span class="px-2 py-0.5 bg-secondary-container text-on-secondary-container rounded-full text-label-sm font-label-sm font-semibold">Tự động quét</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Phát hiện sự kiện tài chính định kỳ sắp tới:</p>
+<div class="mt-3 p-3 bg-surface-container-low border border-outline-variant/60 rounded-lg">
+<div class="flex items-center justify-between text-label-md font-label-md text-on-surface-variant mb-1">
+<span class="flex items-center gap-1 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-sm text-amber-600" data-icon="calendar_month">calendar_month</span>
+                  Đến hạn trả lãi BIDV (Ngày 15 hàng tháng)
+                </span>
+<span class="text-xs text-amber-700 font-semibold bg-amber-50 px-1.5 py-0.5 rounded">Còn 6 ngày</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-normal">
+                Nếu không thể tự thực hiện, ai sẽ được phân quyền xem hạn mức và chuyển khoản từ tài khoản dự phòng của gia đình?
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-3">
+<button class="flex-1 py-2 px-3 bg-surface-container text-on-surface hover:bg-surface-container-high rounded-lg text-title-sm font-title-sm transition-colors text-center">
+              Bỏ qua
+            </button>
+<button class="flex-1 py-2 px-3 bg-primary-container text-on-primary hover:bg-inverse-surface rounded-lg text-title-sm font-title-sm transition-colors text-center shadow-sm">
+              Chỉ định người xử lý
+            </button>
+</div>
+</div>
+</section>
+<!-- 3. Main Grid of 6 Critical Continuity Domains (2x3 Grid Layout) -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<h2 class="text-headline-sm font-headline-sm text-on-surface font-semibold">
+              6 Vùng Quản trị Tiếp quản Thiết yếu
+            </h2>
+<span class="text-label-md font-label-md text-on-surface-variant">(Core Continuity Domains)</span>
+</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Nhấp vào từng thẻ để kiểm tra quyền truy cập &amp; hướng dẫn bàn giao</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Domain 1: Công việc & Doanh nghiệp -->
+<div class="bg-surface-container-lowest border border-outline-variant hover:border-amber-400 rounded-xl p-5 shadow-sm transition-all duration-150 flex flex-col justify-between">
+<div>
+<!-- Header -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined" data-icon="domain">domain</span>
+</div>
+<div>
+<h3 class="text-title-sm font-title-sm text-on-surface">Công việc &amp; Doanh nghiệp</h3>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Business Continuity</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-700 text-label-sm font-label-sm font-bold border border-amber-200">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600 animate-pulse"></span>
+                  40% Khẩn cấp
+                </span>
+</div>
+<!-- Progress bar -->
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-4">
+<div class="bg-amber-600 h-1.5 rounded-full" style="width: 40%"></div>
+</div>
+<!-- Content details -->
+<div class="mt-4 space-y-2.5">
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Thẻ chỉ dẫn đã tạo:</span>
+<span class="font-medium text-on-surface">3 Thẻ hoạt động</span>
+</div>
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Người kế nhiệm định danh:</span>
+<span class="font-medium text-on-surface">Phó TGĐ (Nguyễn Trí)</span>
+</div>
+<div class="p-2.5 rounded bg-amber-50/70 border border-amber-200/80 flex items-start gap-2">
+<span class="material-symbols-outlined text-amber-700 text-sm mt-0.5" data-icon="error">error</span>
+<p class="text-label-sm font-label-sm text-amber-900 leading-tight">
+                    Cảnh báo: Thiếu ủy quyền tài khoản chữ ký số ngân hàng VCB doanh nghiệp.
+                  </p>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-3 border-t border-outline-variant flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Cập nhật 2 ngày trước</span>
+<button class="text-title-sm font-title-sm text-secondary hover:text-on-secondary-container inline-flex items-center gap-1 font-semibold">
+                Cập nhật <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Domain 2: Tài chính & Vay nợ -->
+<div class="bg-surface-container-lowest border border-outline-variant hover:border-amber-400 rounded-xl p-5 shadow-sm transition-all duration-150 flex flex-col justify-between">
+<div>
+<!-- Header -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+</div>
+<div>
+<h3 class="text-title-sm font-title-sm text-on-surface">Tài chính &amp; Vay nợ</h3>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Financial Continuity</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-700 text-label-sm font-label-sm font-bold border border-amber-200">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
+                  70% Quan trọng
+                </span>
+</div>
+<!-- Progress bar -->
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-4">
+<div class="bg-amber-600 h-1.5 rounded-full" style="width: 70%"></div>
+</div>
+<!-- Content details -->
+<div class="mt-4 space-y-2.5">
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Thẻ cấu trúc tài khoản:</span>
+<span class="font-medium text-on-surface">5 Thẻ hoàn chỉnh</span>
+</div>
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Tài khoản dự phòng khẩn cấp:</span>
+<span class="font-medium text-secondary font-semibold">Đã cấp quyền (Vợ)</span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-low border border-outline-variant/60 flex items-start gap-2">
+<span class="material-symbols-outlined text-amber-600 text-sm mt-0.5" data-icon="info">info</span>
+<p class="text-label-sm font-label-sm text-on-surface leading-tight">
+                    Cảnh báo nợ thế chấp BIDV: Thiếu lịch sử thanh toán &amp; điều khoản tất toán trước hạn.
+                  </p>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-3 border-t border-outline-variant flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Cập nhật hôm qua</span>
+<button class="text-title-sm font-title-sm text-secondary hover:text-on-secondary-container inline-flex items-center gap-1 font-semibold">
+                Xem chi tiết <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Domain 3: Gia đình & Nghĩa vụ -->
+<div class="bg-surface-container-lowest border border-outline-variant hover:border-secondary rounded-xl p-5 shadow-sm transition-all duration-150 flex flex-col justify-between">
+<div>
+<!-- Header -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined" data-icon="diversity_1">diversity_1</span>
+</div>
+<div>
+<h3 class="text-title-sm font-title-sm text-on-surface">Gia đình &amp; Nghĩa vụ</h3>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Family Continuity</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-label-sm font-label-sm font-bold border border-emerald-200">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                  85% Tốt (Ready)
+                </span>
+</div>
+<!-- Progress bar -->
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-4">
+<div class="bg-secondary h-1.5 rounded-full" style="width: 85%"></div>
+</div>
+<!-- Content details -->
+<div class="mt-4 space-y-2.5">
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Người bảo trợ chính:</span>
+<span class="font-medium text-on-surface">Vợ (Lê Thu Phương)</span>
+</div>
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Học phí con &amp; Sinh hoạt phí:</span>
+<span class="font-medium text-emerald-700 font-semibold">Đã lập quỹ &amp; phân quyền</span>
+</div>
+<div class="p-2.5 rounded bg-emerald-50/60 border border-emerald-200 flex items-start gap-2">
+<span class="material-symbols-outlined text-emerald-700 text-sm mt-0.5" data-icon="check_circle">check_circle</span>
+<p class="text-label-sm font-label-sm text-emerald-900 leading-tight">
+                    Hồ sơ tiếp quản người giám hộ độc lập cho 2 con nhỏ đã hoàn tất chứng thực.
+                  </p>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-3 border-t border-outline-variant flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Cập nhật 4 ngày trước</span>
+<button class="text-title-sm font-title-sm text-secondary hover:text-on-secondary-container inline-flex items-center gap-1 font-semibold">
+                Quản lý gia đình <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Domain 4: Bất động sản & Tài sản lớn -->
+<div class="bg-surface-container-lowest border border-outline-variant hover:border-amber-400 rounded-xl p-5 shadow-sm transition-all duration-150 flex flex-col justify-between">
+<div>
+<!-- Header -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined" data-icon="real_estate_agent">real_estate_agent</span>
+</div>
+<div>
+<h3 class="text-title-sm font-title-sm text-on-surface">Bất động sản &amp; Tài sản lớn</h3>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Property Continuity</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-700 text-label-sm font-label-sm font-bold border border-amber-200">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
+                  60% Cần bổ sung
+                </span>
+</div>
+<!-- Progress bar -->
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-4">
+<div class="bg-amber-600 h-1.5 rounded-full" style="width: 60%"></div>
+</div>
+<!-- Content details -->
+<div class="mt-4 space-y-2.5">
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Danh mục danh nghĩa:</span>
+<span class="font-medium text-on-surface">3 Bất động sản</span>
+</div>
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Bản scan pháp lý:</span>
+<span class="font-medium text-on-surface">2/3 Đã đưa vào Vault</span>
+</div>
+<div class="p-2.5 rounded bg-amber-50/70 border border-amber-200 flex items-start gap-2">
+<span class="material-symbols-outlined text-amber-700 text-sm mt-0.5" data-icon="priority_high">priority_high</span>
+<p class="text-label-sm font-label-sm text-amber-900 leading-tight">
+                    Thiếu vị trí lưu giữ Sổ đỏ gốc căn hộ Thảo Điền (TP. Thủ Đức).
+                  </p>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-3 border-t border-outline-variant flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Cập nhật 1 tuần trước</span>
+<button class="text-title-sm font-title-sm text-secondary hover:text-on-secondary-container inline-flex items-center gap-1 font-semibold">
+                Bổ sung hồ sơ <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Domain 5: Bảo hiểm & Y tế -->
+<div class="bg-surface-container-lowest border border-outline-variant hover:border-secondary rounded-xl p-5 shadow-sm transition-all duration-150 flex flex-col justify-between">
+<div>
+<!-- Header -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined" data-icon="medical_services">medical_services</span>
+</div>
+<div>
+<h3 class="text-title-sm font-title-sm text-on-surface">Bảo hiểm &amp; Y tế</h3>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Insurance Continuity</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-label-sm font-label-sm font-bold border border-emerald-200">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                  90% Sẵn sàng (Ready)
+                </span>
+</div>
+<!-- Progress bar -->
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-4">
+<div class="bg-secondary h-1.5 rounded-full" style="width: 90%"></div>
+</div>
+<!-- Content details -->
+<div class="mt-4 space-y-2.5">
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Hợp đồng hiệu lực:</span>
+<span class="font-medium text-on-surface">2 Hợp đồng Manulife</span>
+</div>
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Bảo lãnh viện phí:</span>
+<span class="font-medium text-emerald-700 font-semibold">Thẻ Vàng Quốc tế</span>
+</div>
+<div class="p-2.5 rounded bg-emerald-50/60 border border-emerald-200 flex items-start gap-2">
+<span class="material-symbols-outlined text-emerald-700 text-sm mt-0.5" data-icon="health_and_safety">health_and_safety</span>
+<p class="text-label-sm font-label-sm text-emerald-900 leading-tight">
+                    Đã lưu Hotline đại lý phụ trách riêng &amp; quy trình yêu cầu bồi thường 24/7.
+                  </p>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-3 border-t border-outline-variant flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Cập nhật 3 ngày trước</span>
+<button class="text-title-sm font-title-sm text-secondary hover:text-on-secondary-container inline-flex items-center gap-1 font-semibold">
+                Xem thẻ bồi thường <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Domain 6: Hồ sơ & Giấy tờ -->
+<div class="bg-surface-container-lowest border border-outline-variant hover:border-amber-400 rounded-xl p-5 shadow-sm transition-all duration-150 flex flex-col justify-between">
+<div>
+<!-- Header -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined" data-icon="folder_special">folder_special</span>
+</div>
+<div>
+<h3 class="text-title-sm font-title-sm text-on-surface">Hồ sơ &amp; Giấy tờ</h3>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Document Readiness</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-700 text-label-sm font-label-sm font-bold border border-amber-200">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
+                  50% Cần hoàn thiện
+                </span>
+</div>
+<!-- Progress bar -->
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-4">
+<div class="bg-amber-600 h-1.5 rounded-full" style="width: 50%"></div>
+</div>
+<!-- Content details -->
+<div class="mt-4 space-y-2.5">
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Tủ hồ sơ vật lý:</span>
+<span class="font-medium text-amber-700 font-semibold">Chưa khai báo vị trí</span>
+</div>
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Chìa khóa &amp; Mã két sắt:</span>
+<span class="font-medium text-on-surface">Chưa bàn giao dự phòng</span>
+</div>
+<div class="p-2.5 rounded bg-amber-50/70 border border-amber-200 flex items-start gap-2">
+<span class="material-symbols-outlined text-amber-700 text-sm mt-0.5" data-icon="lock_clock">lock_clock</span>
+<p class="text-label-sm font-label-sm text-amber-900 leading-tight">
+                    Cần tạo Thẻ Hướng Dẫn Mở Khóa bí mật (phát hành tự động qua Dual-Key).
+                  </p>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-3 border-t border-outline-variant flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Cập nhật 5 ngày trước</span>
+<button class="text-title-sm font-title-sm text-secondary hover:text-on-secondary-container inline-flex items-center gap-1 font-semibold">
+                Thiết lập chỉ dẫn <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Bottom Summary Bar: Kịch bản Kích hoạt Khẩn cấp 72 Giờ -->
+<section class="bg-primary-container text-on-primary rounded-xl p-5 shadow-md flex flex-col md:flex-row items-center justify-between gap-4 border border-outline-variant/30">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low/10 border border-white/10 flex items-center justify-center text-secondary-fixed flex-shrink-0">
+<span class="material-symbols-outlined text-2xl" data-icon="timer">timer</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="text-title-md font-title-md text-white font-bold">Kịch bản Kích hoạt Khẩn cấp 72 Giờ</h3>
+<span class="px-2 py-0.5 rounded text-[11px] font-mono uppercase bg-secondary/30 text-secondary-fixed border border-secondary-fixed/30 font-semibold">
+                Dry-Run Protocol
+              </span>
+</div>
+<p class="text-body-sm font-body-sm text-on-primary-container mt-0.5">
+              Thử nghiệm diễn tập quy trình bàn giao thẻ chỉ dẫn mà không kích hoạt thông báo thật tới ngân hàng &amp; đối tác.
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-3 w-full md:w-auto justify-end">
+<button class="px-4 py-2 rounded-lg bg-surface-container-low/10 hover:bg-surface-container-low/20 text-white text-title-sm font-title-sm border border-white/20 transition-colors">
+            Cấu hình thời gian đếm ngược
+          </button>
+<button class="px-5 py-2 rounded-lg bg-secondary hover:bg-secondary/90 text-on-secondary text-title-sm font-title-sm font-semibold transition-colors shadow-sm flex items-center gap-2 whitespace-nowrap">
+<span class="material-symbols-outlined text-base" data-icon="play_arrow">play_arrow</span>
+            Chạy Thử Nghiệm Mô Phỏng
+          </button>
+</div>
+</section>
+</main>
+</div>
+</body></html>

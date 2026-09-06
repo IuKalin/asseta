@@ -24,13 +24,7 @@ export interface TrustedPerson {
   trustLevel: number;
 }
 
-export interface ActionCard {
-  id: string;
-  title: string;
-  priority: 'High' | 'Medium' | 'Low';
-  instructions: string;
-  assignedToName: string;
-}
+export * from './actionCard';
 
 export interface ApiResponse<T> {
   success: boolean;

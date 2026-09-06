@@ -1,33 +1,53 @@
-using Asseta.Application.Features.ContinuityMap.Services;
+using Asseta.Api.Models;
+using Asseta.Application.Features.ContinuityMap.Commands.SubmitAssessment;
+using Asseta.Application.Features.ContinuityMap.DTOs;
+using Asseta.Application.Features.ContinuityMap.Queries.GetContinuityGaps;
+using Asseta.Application.Features.ContinuityMap.Queries.GetContinuityMap;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Asseta.Api.Controllers;
 
-[ApiController]
-[Route("api/[controller]")]
-public class ContinuityMapController : ControllerBase
+[Route("api/v1/continuity-map")]
+[Route("api/continuity-map")]
+public class ContinuityMapController : BaseApiController
 {
-    private readonly ContinuityMapService _continuityMapService;
+    private readonly IMediator _mediator;
 
-    public ContinuityMapController(ContinuityMapService continuityMapService)
+    public ContinuityMapController(IMediator mediator)
     {
-        _continuityMapService = continuityMapService;
+        _mediator = mediator;
     }
 
     [HttpGet]
-    public async Task<IActionResult> Get([FromQuery] Guid? ownerId)
+    public async Task<ActionResult<ApiResponse<ContinuityMapDto>>> Get([FromQuery] Guid? ownerId)
     {
-        var targetOwnerId = ownerId ?? Guid.Parse("11111111-1111-1111-1111-111111111111");
-        var result = await _continuityMapService.GetContinuityMapAsync(targetOwnerId);
-        return Ok(new
-        {
-            success = true,
-            data = result,
-            meta = new
-            {
-                timestamp = DateTime.UtcNow,
-                correlationId = Guid.NewGuid().ToString()
-            }
-        });
+        var targetOwnerId = ownerId ?? CurrentOwnerId;
+        var result = await _mediator.Send(new GetContinuityMapQuery(targetOwnerId));
+        return OkResponse(result);
+    }
+
+    [HttpGet("gaps")]
+    public async Task<ActionResult<ApiResponse<IReadOnlyList<ContinuityGapDto>>>> GetGaps([FromQuery] Guid? ownerId)
+    {
+        var targetOwnerId = ownerId ?? CurrentOwnerId;
+        var result = await _mediator.Send(new GetContinuityGapsQuery(targetOwnerId));
+        return OkResponse(result);
+    }
+
+    [HttpPost("assessment")]
+    public async Task<ActionResult<ApiResponse<AssessmentResultDto>>> SubmitAssessment([FromBody] SubmitAssessmentRequest request)
+    {
+        var command = new SubmitContinuityAssessmentCommand(
+            CurrentOwnerId,
+            request.Answers,
+            request.AssessmentVersion ?? "v1");
+
+        var result = await _mediator.Send(command);
+        return CreatedResponse("/api/v1/continuity-map", result);
     }
 }
+
+public record SubmitAssessmentRequest(
+    List<AssessmentAnswerDto> Answers,
+    string? AssessmentVersion = "v1");

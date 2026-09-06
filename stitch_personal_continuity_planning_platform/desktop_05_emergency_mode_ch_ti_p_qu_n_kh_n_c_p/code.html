@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Asseta Continuity - Chế độ Tiếp Quản Khẩn Cấp (Screen 05)</title>
+<!-- Google Fonts: Inter & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN with forms and container-queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed-variant": "#6e3900",
+            "on-tertiary-fixed": "#2f1500",
+            "on-background": "#111c2d",
+            "primary-container": "#131a33",
+            "on-secondary-container": "#006f66",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed-variant": "#005049",
+            "tertiary": "#000000",
+            "background": "#f9f9ff",
+            "on-error": "#ffffff",
+            "secondary-fixed": "#89f5e7",
+            "surface": "#f9f9ff",
+            "on-secondary-fixed": "#00201d",
+            "surface-dim": "#cfdaf2",
+            "tertiary-container": "#2f1500",
+            "on-secondary": "#ffffff",
+            "outline": "#76767e",
+            "primary": "#000000",
+            "secondary-fixed-dim": "#6bd8cb",
+            "on-surface": "#111c2d",
+            "on-primary-fixed": "#131a33",
+            "outline-variant": "#c6c6ce",
+            "surface-tint": "#565d79",
+            "tertiary-fixed-dim": "#ffb77d",
+            "on-tertiary-container": "#c76c00",
+            "surface-container-high": "#dee8ff",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#45464d",
+            "inverse-surface": "#263143",
+            "surface-container": "#e7eeff",
+            "on-primary-fixed-variant": "#3e4660",
+            "surface-container-low": "#f0f3ff",
+            "surface-bright": "#f9f9ff",
+            "error": "#ba1a1a",
+            "inverse-primary": "#bec5e5",
+            "primary-fixed": "#dbe1ff",
+            "error-container": "#ffdad6",
+            "secondary": "#006a61",
+            "surface-container-highest": "#d8e3fb",
+            "surface-variant": "#d8e3fb",
+            "inverse-on-surface": "#ecf1ff",
+            "primary-fixed-dim": "#bec5e5",
+            "surface-container-lowest": "#ffffff",
+            "on-primary": "#ffffff",
+            "tertiary-fixed": "#ffdcc3",
+            "on-primary-container": "#7b83a0",
+            "secondary-container": "#86f2e4"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "layout-margin-mobile": "1rem",
+            "space-lg": "1.5rem",
+            "space-3xl": "4rem",
+            "space-xl": "2rem",
+            "layout-margin-desktop": "2rem",
+            "space-2xs": "0.125rem",
+            "space-md": "0.75rem",
+            "gutter-mobile": "1rem",
+            "layout-margin-tablet": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-2xl": "3rem",
+            "space-base": "1rem",
+            "space-sm": "0.5rem",
+            "gutter-desktop": "1.5rem",
+            "max-width-content": "80rem"
+          },
+          "fontFamily": {
+            "title-md": ["Inter"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "label-md": ["Inter"],
+            "body-lg": ["Inter"],
+            "body-md": ["Inter"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "display-sm": ["Plus Jakarta Sans"],
+            "body-sm": ["Inter"],
+            "title-sm": ["Inter"],
+            "label-sm": ["Inter"]
+          },
+          "fontSize": {
+            "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+            "display-sm": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" }],
+            "title-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1;
+    }
+    @keyframes pulse-subtle {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    .animate-pulse-dot {
+      animation: pulse-subtle 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col selection:bg-secondary selection:text-on-secondary">
+<!-- SHELL CONTAINER: Persistent SideNavBar + Right Workspace -->
+<div class="flex h-screen overflow-hidden">
+<!-- ============================================================ -->
+<!-- 1. SHARED COMPONENT: SideNavBar                               -->
+<!-- ============================================================ -->
+<aside class="fixed top-0 left-0 h-screen w-64 border-r border-outline-variant bg-surface-container-lowest z-50 flex flex-col justify-between p-4 select-none">
+<!-- SideNav Header -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 px-2 pt-1">
+<div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-secondary-fixed shadow-sm border border-outline-variant/30">
+<span class="material-symbols-outlined text-title-md" data-icon="shield">shield</span>
+</div>
+<div class="flex flex-col">
+<span class="text-title-md font-title-md font-bold text-on-surface tracking-tight">Asseta Continuity</span>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">256-bit AES Encrypted</span>
+</div>
+</div>
+</div>
+<!-- High Urgency CTA Button in Nav -->
+<button class="w-full flex items-center justify-center gap-2 py-2 px-3 bg-error text-on-error rounded-lg text-title-sm font-title-sm hover:bg-on-error-container transition-colors duration-150 shadow-sm">
+<span class="material-symbols-outlined text-title-sm" data-icon="lock_clock">lock_clock</span>
+<span>Trigger Handover Protocol</span>
+</button>
+<!-- Navigation Tabs: Emergency Handover Mode is ACTIVE based on Page Intent -->
+<nav class="flex flex-col gap-1 mt-2">
+<!-- Inactive Tab: Continuity Map -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+<span>Continuity Map</span>
+</a>
+<!-- Inactive Tab: Action Cards -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="task_alt">task_alt</span>
+<span>Action Cards</span>
+</a>
+<!-- Inactive Tab: Trusted People -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>Trusted People</span>
+</a>
+<!-- Inactive Tab: Continuity Plan -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span>Continuity Plan</span>
+</a>
+<!-- ACTIVE TAB (from JSON exact list): Emergency Handover Mode -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface bg-surface-container font-title-sm text-title-sm rounded-lg border-l-2 border-secondary" href="#">
+<span class="material-symbols-outlined text-secondary" data-icon="lock_clock">lock_clock</span>
+<span class="font-title-sm text-title-sm">Emergency Handover Mode</span>
+<span class="ml-auto w-2 h-2 rounded-full bg-error animate-pulse-dot"></span>
+</a>
+</nav>
+</div>
+<!-- SideNav Footer -->
+<div class="flex flex-col gap-1 border-t border-outline-variant pt-3">
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+<span>Check-in Status</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Security Settings</span>
+</a>
+<!-- Appointed Heir Session indicator -->
+<div class="mt-2 p-2.5 bg-surface-container-low rounded-lg border border-outline-variant/40 flex items-center gap-2.5">
+<div class="w-7 h-7 rounded bg-primary-container text-surface-container-lowest flex items-center justify-center font-title-sm text-title-sm">
+            MP
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="text-label-sm font-label-sm text-on-surface truncate">Nguyễn Mai Phương</span>
+<span class="text-label-sm font-label-sm text-secondary truncate">Designated Successor</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- ============================================================ -->
+<!-- 2. MAIN WORKSPACE WITH TOPNAVBAR & CONTENT                   -->
+<!-- ============================================================ -->
+<div class="ml-64 flex-1 flex flex-col h-screen overflow-y-auto">
+<!-- SHARED COMPONENT: TopNavBar -->
+<header class="sticky top-0 right-0 w-full border-b border-outline-variant bg-surface-container-lowest z-40 shadow-sm">
+<div class="flex items-center justify-between px-8 py-3 w-full">
+<!-- Left: Search & Scope -->
+<div class="flex items-center gap-6">
+<div class="relative w-80">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full pl-9 pr-3 py-1.5 text-body-md font-body-md bg-surface border border-outline-variant rounded-lg focus:outline-none focus:border-secondary transition-colors duration-150 text-on-surface placeholder:text-outline" placeholder="Tìm kiếm tài sản, mật mã tủ, liên hệ khẩn..." type="text"/>
+</div>
+<!-- Top Links -->
+<nav class="hidden xl:flex items-center gap-6">
+<a class="text-on-surface font-title-sm text-title-sm border-b-2 border-secondary pb-1" href="#">Governance Ledger</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-on-surface transition-colors duration-150" href="#">Audit Trail</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-on-surface transition-colors duration-150" href="#">Encrypted Vault</a>
+</nav>
+</div>
+<!-- Trailing Actions & Alert Flag -->
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-error-container text-on-error-container border border-error/30 rounded-full">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse-dot"></span>
+<span class="text-label-sm font-label-sm uppercase tracking-wider font-bold">EMERGENCY PROTOCOL ACTIVE</span>
+</div>
+<!-- Trailing Secondary Action -->
+<button class="px-3 py-1.5 bg-surface-container-lowest border border-outline-variant text-on-surface hover:bg-surface-container-low font-title-sm text-title-sm rounded-lg transition-colors duration-150 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-body-md" data-icon="file_download">file_download</span>
+<span>Export Plan</span>
+</button>
+<!-- Trailing Primary Action (High Security) -->
+<button class="px-3.5 py-1.5 bg-primary text-on-primary hover:bg-primary-container font-title-sm text-title-sm rounded-lg transition-colors duration-150 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-body-md" data-icon="emergency">emergency</span>
+<span>Emergency Handover</span>
+</button>
+<!-- Trailing Icon Actions -->
+<div class="flex items-center gap-1 ml-1 border-l border-outline-variant pl-3">
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors duration-150 relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors duration-150">
+<span class="material-symbols-outlined" data-icon="shield">shield</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors duration-150">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+</div>
+<!-- Founder / Appointed Avatar -->
+<div class="ml-2 flex items-center gap-2 pl-2 border-l border-outline-variant">
+<div class="w-8 h-8 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center font-title-sm text-title-sm text-on-surface overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A dignified close-up corporate portrait photograph of an executive founder in a bespoke navy wool tailored suit, set against an institutional minimalist slate background, softly illuminated by clean gallery lighting to reflect authority and high-trust leadership." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWuZR6L1miL2xFwi_oMJse2KHEaIdEg8lNetkehWdQZ-sfco2K-Yp9D_iY743OEhDOG0O-0qRrIZOIfR-2spPFwcN2wDyQn9s8k8vFLDL2oQhqfNqKfR-Ko6VE_UDdagP0vqQT5Jgg4tf7sRN2Ol7akh5iJyz6Be_CUIsloxgg0iNXS310fp3Xh6YoaK5OheVvEXy6ms3wS0mE1jAt4yWUgPHwb2enoypTYeblr4X8wLMBrNRJOWW1"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- MAIN CANVAS WORKSPACE -->
+<main class="flex-1 px-8 py-6 space-y-6 max-w-max-width-content mx-auto w-full">
+<!-- ============================================================ -->
+<!-- TOP EMERGENCY BANNER (Navy/Amber/Red Priority Theme)          -->
+<!-- ============================================================ -->
+<section class="bg-primary-container text-surface-container-lowest rounded-xl p-5 border border-primary-container shadow-md relative overflow-hidden">
+<!-- Subdued background accent geometric grid lines -->
+<div class="absolute right-0 top-0 bottom-0 w-96 opacity-10 pointer-events-none flex justify-end items-center pr-6">
+<span class="material-symbols-outlined text-[160px]" data-icon="verified_user">verified_user</span>
+</div>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-5">
+<div class="space-y-2 max-w-3xl">
+<!-- Pill Flag -->
+<div class="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm tracking-wider uppercase font-bold shadow-sm">
+<span class="w-2 h-2 rounded-full bg-surface-container-lowest animate-pulse-dot"></span>
+<span>Giao thức kích hoạt hợp lệ</span>
+</div>
+<h1 class="text-headline-md font-headline-md text-surface-container-lowest tracking-tight">
+                GIAO THỨC TIẾP QUẢN KHẨN CẤP #AST-8821 ĐÃ ĐƯỢC KÍCH HOẠT HỢP LỆ
+              </h1>
+<p class="text-body-md font-body-md text-on-primary-container leading-relaxed">
+                Kích hoạt lúc <strong class="text-surface-container-lowest font-medium">08:30 hôm nay</strong> sau khi xác minh 2 lớp đa bên hoàn tất (Bảo chứng bởi Trọng tài Pháp lý &amp; Xác thực Sinh trắc học).
+              </p>
+<!-- Safe countdown clock badge -->
+<div class="inline-flex items-center gap-3 pt-1">
+<div class="flex items-center gap-1.5 px-3 py-1 bg-surface-container-lowest/10 backdrop-blur rounded border border-surface-container-lowest/20">
+<span class="material-symbols-outlined text-secondary-fixed text-title-sm" data-icon="timer">timer</span>
+<span class="text-label-md font-label-md text-surface-container-lowest">Thời hạn an toàn còn:</span>
+<span class="font-title-sm text-title-sm text-secondary-fixed font-mono tracking-wide">71 Giờ 29 Phút</span>
+</div>
+<div class="flex items-center gap-1 text-label-sm font-label-sm text-on-primary-container">
+<span class="material-symbols-outlined text-label-sm" data-icon="lock">lock</span>
+<span>Khóa xác thực SHA-256: 0x9f4a...d81e</span>
+</div>
+</div>
+</div>
+<!-- Fast Actions on Banner -->
+<div class="flex flex-row md:flex-col sm:flex-row gap-2 shrink-0 items-start md:items-end justify-start">
+<button class="px-4 py-2 bg-surface-container-lowest text-on-surface hover:bg-surface-container-low font-title-sm text-title-sm rounded-lg transition-colors duration-150 flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-title-sm" data-icon="file_present">file_present</span>
+<span>Xuất bản sao điện tử</span>
+</button>
+<button class="px-4 py-2 bg-secondary text-on-secondary hover:bg-on-secondary-container font-title-sm text-title-sm rounded-lg transition-colors duration-150 flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-title-sm" data-icon="check_circle">check_circle</span>
+<span>Xác nhận an toàn</span>
+</button>
+</div>
+</div>
+</section>
+<!-- ============================================================ -->
+<!-- WELCOME & CALM MESSAGE CARD (Dignified Restraint)             -->
+<!-- ============================================================ -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0 border border-outline-variant/60">
+<span class="material-symbols-outlined text-headline-sm" data-icon="mail">mail</span>
+</div>
+<div class="flex-1 space-y-3">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div>
+<h2 class="text-headline-sm font-headline-sm text-on-surface">
+                    Xin chào Nguyễn Mai Phương. Đây là Kế hoạch Tiếp quản Cá nhân do Anh Minh chuẩn bị riêng cho bạn.
+                  </h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">
+                    Mối quan hệ pháp lý: <span class="font-medium text-on-surface">Người phối ngẫu &amp; Người thừa hành quyền tài sản số 01</span>
+</p>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant border border-outline-variant text-label-sm font-label-sm font-mono">
+<span class="material-symbols-outlined text-label-sm" data-icon="key">key</span>
+                  Ghi chú soạn thảo 12 ngày trước, mã hoá 256-bit AES
+                </span>
+</div>
+<!-- Inner Personal Calm Card -->
+<div class="bg-surface-container-low/70 border-l-4 border-secondary rounded-r-lg p-4 text-on-surface space-y-1.5">
+<div class="flex items-center gap-2 text-secondary font-title-sm text-title-sm">
+<span class="material-symbols-outlined text-title-sm" data-icon="favorite">favorite</span>
+<span class="font-bold">Thông điệp an tâm từ Anh Minh:</span>
+</div>
+<blockquote class="text-body-md font-body-md text-on-surface leading-relaxed italic">
+                  “Tất cả hướng dẫn, vị trí hồ sơ và số liên lạc quan trọng đã sẵn sàng. Không cần hoảng loạn, hãy thực hiện theo từng bước dưới đây để bảo đảm gia đình và tài chính vận hành thông suốt.”
+                </blockquote>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================================ -->
+<!-- HIGH PRIORITY ACTION SECTION (Split Desktop Layout)          -->
+<!-- ============================================================ -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- LEFT COLUMN: Hành Động Khẩn Cấp Bắt Buộc (5 Cols) -->
+<div class="lg:col-span-5 space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error" data-icon="warning">warning</span>
+<h3 class="text-title-md font-title-md text-on-surface">Hành Động Khẩn Cấp Bắt Buộc</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+                Cần xử lý ngay
+              </span>
+</div>
+<!-- Emergency Card Focus (BIDV Loan Repayment) -->
+<div class="bg-surface-container-lowest border-2 border-error/40 rounded-xl p-5 shadow-sm space-y-4 relative overflow-hidden">
+<div class="absolute -top-6 -right-6 w-24 h-24 bg-error/5 rounded-full pointer-events-none"></div>
+<!-- Due banner -->
+<div class="flex items-center justify-between border-b border-outline-variant/60 pb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-title-md" data-icon="schedule">schedule</span>
+<span class="font-title-sm text-title-sm text-error">Hạn chót: Trước 17:00 hôm nay</span>
+</div>
+<span class="text-label-sm font-label-sm px-2 py-0.5 bg-error/10 text-error rounded font-mono font-semibold">T-04:28:10</span>
+</div>
+<!-- Title & Amount -->
+<div>
+<h4 class="text-headline-sm font-headline-sm text-on-surface">
+                  Thanh toán tiền gốc và lãi khoản vay BIDV
+                </h4>
+<div class="mt-2 p-3 bg-surface-container-low rounded-lg border border-outline-variant/50 flex items-baseline justify-between">
+<span class="text-label-md font-label-md text-on-surface-variant">Số tiền đến hạn:</span>
+<span class="text-headline-md font-headline-md text-on-surface font-mono font-bold tracking-tight">
+                    42.500.000 <span class="text-title-sm font-title-sm font-normal text-on-surface-variant">VNĐ</span>
+</span>
+</div>
+</div>
+<!-- Detailed Steps -->
+<div class="space-y-3 pt-1">
+<!-- Step 1: Payment Method -->
+<div class="flex items-start gap-2.5 text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-secondary text-title-sm mt-0.5" data-icon="account_balance">account_balance</span>
+<div>
+<strong class="text-on-surface font-title-sm">Phương án thanh toán nhanh:</strong>
+<p class="text-on-surface-variant mt-0.5">
+                      Đăng nhập app ngân hàng bằng tài khoản phụ gia đình lưu trong <strong class="text-on-surface">Thiết bị Token</strong> hoặc gọi trực tiếp cho Chị Hạnh.
+                    </p>
+</div>
+</div>
+<!-- Step 2: Dossier Location -->
+<div class="flex items-start gap-2.5 text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-secondary text-title-sm mt-0.5" data-icon="folder_open">folder_open</span>
+<div>
+<strong class="text-on-surface font-title-sm">Vị trí hồ sơ gốc &amp; hợp đồng:</strong>
+<p class="text-on-surface-variant mt-0.5">
+                      Tủ phòng ngủ master, <span class="bg-surface-container px-1.5 py-0.5 rounded font-medium text-on-surface">túi màu đỏ khóa mã (0512)</span>.
+                    </p>
+</div>
+</div>
+<!-- Step 3: Officer Contact -->
+<div class="flex items-start gap-2.5 text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-secondary text-title-sm mt-0.5" data-icon="support_agent">support_agent</span>
+<div>
+<strong class="text-on-surface font-title-sm">Cán bộ phụ trách tín dụng BIDV:</strong>
+<p class="text-on-surface-variant mt-0.5">
+                      Chị Hạnh (<span class="font-mono text-on-surface font-semibold">0904.567.889</span>) — Chi nhánh Tràng Tiền.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Action buttons -->
+<div class="pt-2 flex items-center gap-3 border-t border-outline-variant/60">
+<a class="flex-1 py-2 px-3 bg-primary text-on-primary hover:bg-primary-container rounded-lg text-title-sm font-title-sm flex items-center justify-center gap-1.5 transition-colors duration-150" href="tel:0904567889">
+<span class="material-symbols-outlined text-title-sm" data-icon="call">call</span>
+<span>Gọi ngay cho cán bộ tín dụng</span>
+</a>
+<button class="py-2 px-4 bg-surface-container-lowest border border-outline-variant text-secondary hover:bg-secondary/10 rounded-lg text-title-sm font-title-sm flex items-center justify-center gap-1.5 transition-colors duration-150">
+<span class="material-symbols-outlined text-title-sm" data-icon="task_alt">task_alt</span>
+<span>Đã hoàn thành</span>
+</button>
+</div>
+</div>
+<!-- Mini Secondary Notice -->
+<div class="p-3 bg-surface-container-low rounded-lg border border-outline-variant/60 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="info">info</span>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                Biên lai sau khi chuyển khoản sẽ tự động lưu vào <strong class="text-on-surface">Sổ Nhật Ký Pháp Lý</strong> để đối soát tự động.
+              </p>
+</div>
+</div>
+<!-- RIGHT COLUMN: Nhiệm Vụ Phân Quyền Tiếp Quản Theo Thứ Tự Ưu Tiên (7 Cols) -->
+<div class="lg:col-span-7 space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="format_list_numbered">format_list_numbered</span>
+<h3 class="text-title-md font-title-md text-on-surface">Nhiệm Vụ Phân Quyền Tiếp Quản Theo Thứ Tự Ưu Tiên</h3>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">3 Nhiệm vụ cốt lõi</span>
+</div>
+<div class="space-y-3.5">
+<!-- TASK 1: Discovery Complex Rent -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 shadow-sm hover:border-secondary/60 transition-all duration-150">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-start gap-3">
+<span class="w-7 h-7 rounded-full bg-surface-container text-on-surface font-title-sm text-title-sm flex items-center justify-center shrink-0 mt-0.5 border border-outline-variant/60">
+                      01
+                    </span>
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<h4 class="text-title-md font-title-md text-on-surface">
+                          Thu tiền thuê nhà căn hộ Discovery Complex
+                        </h4>
+<span class="px-2 py-0.2 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm font-bold">
+                          Dòng tiền tháng
+                        </span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                        Số tiền: <strong class="text-on-surface font-mono">28.000.000 đ/tháng</strong> — Khách thuê: <strong class="text-on-surface">David Miller</strong> (Kỳ hạn ngày 05 hàng tháng).
+                      </p>
+<div class="flex items-center gap-4 text-body-sm font-body-sm pt-1">
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-label-md" data-icon="location_on">location_on</span>
+                          Tầng 18, Tháp A Căn hộ 1804
+                        </span>
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-label-md" data-icon="mail">mail</span>
+                          david.miller@techglobal.com
+                        </span>
+</div>
+</div>
+</div>
+<button class="shrink-0 px-3 py-1.5 bg-surface-container-low hover:bg-surface-container border border-outline-variant text-on-surface rounded-lg text-title-sm font-title-sm flex items-center gap-1 transition-colors duration-150">
+<span class="material-symbols-outlined text-title-sm" data-icon="visibility">visibility</span>
+<span>Xem mẫu email gửi khách</span>
+</button>
+</div>
+</div>
+<!-- TASK 2: Manulife Health Insurance -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 shadow-sm hover:border-secondary/60 transition-all duration-150">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-start gap-3">
+<span class="w-7 h-7 rounded-full bg-surface-container text-on-surface font-title-sm text-title-sm flex items-center justify-center shrink-0 mt-0.5 border border-outline-variant/60">
+                      02
+                    </span>
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<h4 class="text-title-md font-title-md text-on-surface">
+                          Hồ sơ Bảo hiểm Y tế Manulife để thanh toán viện phí
+                        </h4>
+<span class="px-2 py-0.2 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold">
+                          Y tế &amp; Bảo lãnh
+                        </span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                        Vị trí giấy tờ: <strong class="text-on-surface">Tủ phòng làm việc Tầng 2 (Ngăn kéo thứ 3 bên trái)</strong>.
+                      </p>
+<div class="flex flex-wrap items-center gap-3 text-body-sm font-body-sm pt-1">
+<span class="inline-flex items-center gap-1 text-on-surface font-mono bg-surface-container px-2 py-0.5 rounded text-label-sm font-semibold">
+<span class="material-symbols-outlined text-label-md" data-icon="badge">badge</span>
+                          Thẻ: MNL-CARE-88190
+                        </span>
+<span class="inline-flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-label-md" data-icon="call">call</span>
+                          Hotline bảo lãnh: <strong class="text-on-surface font-mono ml-0.5">1900 1776</strong>
+</span>
+<span class="text-secondary font-medium">Bảo lãnh trực tiếp tại Vinmec &amp; Việt Pháp</span>
+</div>
+</div>
+</div>
+<button class="shrink-0 px-3 py-1.5 bg-surface-container-low hover:bg-surface-container border border-outline-variant text-on-surface rounded-lg text-title-sm font-title-sm flex items-center gap-1 transition-colors duration-150">
+<span class="material-symbols-outlined text-title-sm" data-icon="call">call</span>
+<span>Gọi Hotline</span>
+</button>
+</div>
+</div>
+<!-- TASK 3: Legal Handover with Lawyer Duc -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 shadow-sm hover:border-secondary/60 transition-all duration-150">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-start gap-3">
+<span class="w-7 h-7 rounded-full bg-surface-container text-on-surface font-title-sm text-title-sm flex items-center justify-center shrink-0 mt-0.5 border border-outline-variant/60">
+                      03
+                    </span>
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<h4 class="text-title-md font-title-md text-on-surface">
+                          Liên hệ Luật sư Đức để nhận bàn giao tài liệu uỷ quyền công ty
+                        </h4>
+<span class="px-2 py-0.2 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+                          Pháp lý Doanh nghiệp
+                        </span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                        Cố vấn trưởng: <strong class="text-on-surface">LS. Trần Trọng Đức</strong> (Văn phòng Luật Đức &amp; Cộng sự).
+                      </p>
+<div class="flex items-center gap-4 text-body-sm font-body-sm pt-1">
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-label-md" data-icon="phone_iphone">phone_iphone</span>
+                          Số trực tiếp: <span class="font-mono text-on-surface font-semibold">0983.112.901</span>
+</span>
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-label-md" data-icon="shield_lock">shield_lock</span>
+                          Mã hồ sơ uỷ quyền: <span class="font-mono text-on-surface">UQ-DN-2024</span>
+</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="px-3 py-1.5 bg-primary text-on-primary hover:bg-primary-container rounded-lg text-title-sm font-title-sm flex items-center gap-1 transition-colors duration-150">
+<span class="material-symbols-outlined text-title-sm" data-icon="call">call</span>
+<span>Kết nối</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Vault Key Location Reference -->
+<div class="bg-primary-container text-surface-container-lowest rounded-xl p-4 border border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded bg-surface-container-lowest/10 flex items-center justify-center text-secondary-fixed">
+<span class="material-symbols-outlined text-title-md" data-icon="vpn_key">vpn_key</span>
+</div>
+<div>
+<div class="text-title-sm font-title-sm text-surface-container-lowest">Kho Khóa Kỹ Thuật Số &amp; Mật Mã Master</div>
+<div class="text-body-sm font-body-sm text-on-primary-container">Được giải mã tạm thời trong suốt 72 giờ của Chế độ Tiếp Quản Khẩn Cấp</div>
+</div>
+</div>
+<button class="px-3 py-1.5 bg-surface-container-lowest/15 hover:bg-surface-container-lowest/25 text-surface-container-lowest rounded text-title-sm font-title-sm transition-colors duration-150 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-title-sm" data-icon="lock_open">lock_open</span>
+<span>Mở Vault Bí Mật</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ============================================================ -->
+<!-- BOTTOM SUPPORT BAR (24/7 Continuity Support Hub)             -->
+<!-- ============================================================ -->
+<footer class="mt-4 mb-6 bg-surface-container-lowest border border-outline-variant rounded-xl p-4 shadow-sm">
+<div class="flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3.5">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-headline-sm" data-icon="headset_mic">headset_mic</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="text-title-md font-title-md text-on-surface">Đường Dây Khẩn Cấp &amp; Trợ Lý Continuity Hỗ Trợ 24/7</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary/10 text-secondary text-label-sm font-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse-dot"></span>
+                    Trực tuyến
+                  </span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                  Đội ngũ chuyên viên pháp lý và kiểm toán độc lập sẵn sàng đồng hành cùng bạn xử lý từng danh mục bàn giao.
+                </p>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 w-full md:w-auto">
+<!-- Hotline 1900 8899 -->
+<a class="flex-1 md:flex-none px-4 py-2 bg-surface-container-low border border-outline-variant hover:bg-surface-container text-on-surface rounded-lg text-title-sm font-title-sm flex items-center justify-center gap-2 transition-colors duration-150" href="tel:19008899">
+<span class="material-symbols-outlined text-title-sm text-secondary" data-icon="phone_in_talk">phone_in_talk</span>
+<span>Tổng đài khẩn cấp: <strong class="font-mono text-on-surface">1900 8899 (Nhánh 1)</strong></span>
+</a>
+<!-- Encrypted Chat with Legal Specialist -->
+<button class="flex-1 md:flex-none px-4 py-2 bg-primary text-on-primary hover:bg-primary-container rounded-lg text-title-sm font-title-sm flex items-center justify-center gap-2 transition-colors duration-150 shadow-sm">
+<span class="material-symbols-outlined text-title-sm" data-icon="chat">chat</span>
+<span>Chat mã hoá với Chuyên viên pháp lý Asseta</span>
+</button>
+</div>
+</div>
+</footer>
+</main>
+</div>
+</div>
+</body></html>

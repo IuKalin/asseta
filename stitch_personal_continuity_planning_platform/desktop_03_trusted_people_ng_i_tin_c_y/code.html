@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-surface" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Asseta Continuity — Hội đồng Tiếp quản &amp; Người Tin Cậy</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed-variant": "#6e3900",
+            "on-tertiary-fixed": "#2f1500",
+            "on-background": "#111c2d",
+            "primary-container": "#131a33",
+            "on-secondary-container": "#006f66",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed-variant": "#005049",
+            "tertiary": "#000000",
+            "background": "#f9f9ff",
+            "on-error": "#ffffff",
+            "secondary-fixed": "#89f5e7",
+            "surface": "#f9f9ff",
+            "on-secondary-fixed": "#00201d",
+            "surface-dim": "#cfdaf2",
+            "tertiary-container": "#2f1500",
+            "on-secondary": "#ffffff",
+            "outline": "#76767e",
+            "primary": "#000000",
+            "secondary-fixed-dim": "#6bd8cb",
+            "on-surface": "#111c2d",
+            "on-primary-fixed": "#131a33",
+            "outline-variant": "#c6c6ce",
+            "surface-tint": "#565d79",
+            "tertiary-fixed-dim": "#ffb77d",
+            "on-tertiary-container": "#c76c00",
+            "surface-container-high": "#dee8ff",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#45464d",
+            "inverse-surface": "#263143",
+            "surface-container": "#e7eeff",
+            "on-primary-fixed-variant": "#3e4660",
+            "surface-container-low": "#f0f3ff",
+            "surface-bright": "#f9f9ff",
+            "error": "#ba1a1a",
+            "inverse-primary": "#bec5e5",
+            "primary-fixed": "#dbe1ff",
+            "error-container": "#ffdad6",
+            "secondary": "#006a61",
+            "surface-container-highest": "#d8e3fb",
+            "surface-variant": "#d8e3fb",
+            "inverse-on-surface": "#ecf1ff",
+            "primary-fixed-dim": "#bec5e5",
+            "surface-container-lowest": "#ffffff",
+            "on-primary": "#ffffff",
+            "tertiary-fixed": "#ffdcc3",
+            "on-primary-container": "#7b83a0",
+            "secondary-container": "#86f2e4"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "layout-margin-mobile": "1rem",
+            "space-lg": "1.5rem",
+            "space-3xl": "4rem",
+            "space-xl": "2rem",
+            "layout-margin-desktop": "2rem",
+            "space-2xs": "0.125rem",
+            "space-md": "0.75rem",
+            "gutter-mobile": "1rem",
+            "layout-margin-tablet": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-2xl": "3rem",
+            "space-base": "1rem",
+            "space-sm": "0.5rem",
+            "gutter-desktop": "1.5rem",
+            "max-width-content": "80rem"
+          },
+          "fontFamily": {
+            "title-md": ["Inter"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "label-md": ["Inter"],
+            "body-lg": ["Inter"],
+            "body-md": ["Inter"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "display-sm": ["Plus Jakarta Sans"],
+            "body-sm": ["Inter"],
+            "title-sm": ["Inter"],
+            "label-sm": ["Inter"],
+            "mono": ["JetBrains Mono", "monospace"]
+          },
+          "fontSize": {
+            "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+            "display-sm": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" }],
+            "title-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      vertical-align: middle;
+    }
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #F8FAFC;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body class="h-full bg-[#F8FAFC] text-on-surface antialiased overflow-x-hidden font-body-md text-body-md">
+<!-- Fixed SideNavBar (Shared Component Anchor) -->
+<aside class="fixed top-0 left-0 h-screen w-64 border-r border-outline-variant dark:border-outline-variant bg-surface-container-lowest dark:bg-surface-container-lowest z-50 select-none shadow-none flex flex-col justify-between">
+<!-- Top Monogram & Identity Header -->
+<div class="p-4 border-b border-[#E2E8F0]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-[#0B132B] flex items-center justify-center text-white font-title-md text-title-md tracking-wider border border-[#1C2541] shadow-sm">
+<span class="font-headline-sm text-headline-sm text-white">AC</span>
+</div>
+<div class="flex flex-col">
+<div class="text-title-md font-title-md font-bold text-on-surface dark:text-on-surface tracking-tight leading-tight">Asseta Continuity</div>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-[13px] text-secondary font-semibold" data-icon="lock">lock</span>
+<span class="text-[11px] font-mono text-[#0D9488] font-semibold tracking-tight">256-bit AES Encrypted</span>
+</div>
+</div>
+</div>
+<!-- Quick Emergency Protocol Status Pill in Nav -->
+<div class="mt-4 p-2.5 bg-surface-container-low rounded border border-[#E2E8F0] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0D9488] opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-[#0D9488]"></span>
+</span>
+<span class="text-label-sm font-label-sm text-[#0F766E]">SENTINEL: ARMED</span>
+</div>
+<span class="text-label-sm font-label-sm font-mono text-[#475569]">90D CADENCE</span>
+</div>
+</div>
+<!-- Navigation Tabs List -->
+<nav class="flex-1 px-3 py-4 space-y-1 overflow-y-auto custom-scrollbar">
+<!-- 1. Continuity Map -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low dark:hover:bg-surface-container-low hover:text-on-surface dark:hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="account_tree">account_tree</span>
+<span>Continuity Map</span>
+</a>
+<!-- 2. Action Cards -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low dark:hover:bg-surface-container-low hover:text-on-surface dark:hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="task_alt">task_alt</span>
+<span>Action Cards</span>
+</a>
+<!-- 3. Trusted People (ACTIVE MATCH) -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface dark:text-on-surface bg-surface-container dark:bg-surface-container font-title-sm text-title-sm rounded-lg border-l-2 border-secondary shadow-none transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px] text-secondary font-semibold" data-icon="group" data-weight="fill" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-semibold text-[#0B132B]">Trusted People</span>
+<span class="ml-auto bg-[#CCFBF1] text-[#0F766E] text-[11px] font-bold px-1.5 py-0.5 rounded-full">3/3</span>
+</a>
+<!-- 4. Continuity Plan -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low dark:hover:bg-surface-container-low hover:text-on-surface dark:hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="description">description</span>
+<span>Continuity Plan</span>
+</a>
+<!-- 5. Emergency Handover Mode -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low dark:hover:bg-surface-container-low hover:text-on-surface dark:hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[20px] text-[#B45309]" data-icon="lock_clock">lock_clock</span>
+<span>Emergency Handover Mode</span>
+</a>
+<!-- Handover Trigger CTA -->
+<div class="pt-4 px-1">
+<button class="w-full py-2.5 px-3 bg-[#0B132B] hover:bg-[#1C2541] text-white rounded text-label-md font-label-md flex items-center justify-center gap-2 border border-[#0B132B] transition-colors duration-150 shadow-sm group">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed transition-transform group-hover:scale-110" data-icon="shield">shield</span>
+<span>Trigger Handover Protocol</span>
+</button>
+</div>
+</nav>
+<!-- Footer System Status & Settings -->
+<div class="p-3 border-t border-[#E2E8F0] space-y-1 bg-[#FBFDFF]">
+<a class="flex items-center justify-between px-3 py-1.5 text-on-surface-variant dark:text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-[#0D9488]" data-icon="verified_user">verified_user</span>
+<span class="text-body-sm font-body-sm">Check-in Status</span>
+</div>
+<span class="text-[10px] bg-[#F0FDFA] text-[#0F766E] border border-[#CCFBF1] px-1.5 py-0.5 rounded font-mono">ACTIVE</span>
+</a>
+<a class="flex items-center gap-2.5 px-3 py-1.5 text-on-surface-variant dark:text-on-surface-variant font-body-md text-body-md rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="settings">settings</span>
+<span class="text-body-sm font-body-sm">Security Settings</span>
+</a>
+</div>
+</aside>
+<!-- Main Canvas Frame with Left Offset (16rem = 64) -->
+<div class="pl-64 flex flex-col min-h-screen">
+<!-- TopNavBar (Shared Component Anchor) -->
+<header class="sticky top-0 right-0 w-full z-40 bg-surface-container-lowest dark:bg-surface-container-lowest border-b border-outline-variant dark:border-outline-variant shadow-sm dark:shadow-none">
+<div class="flex items-center justify-between px-8 py-3 w-full">
+<!-- Left: Search / Scope Breadcrumb -->
+<div class="flex items-center gap-4 w-96">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[#76767E] text-[18px]" data-icon="search">search</span>
+<input class="w-full h-10 pl-9 pr-3 rounded bg-[#FFFFFF] border border-[#E2E8F0] text-body-md font-body-md text-[#111C2D] focus:border-[#0D9488] focus:ring-1 focus:ring-[#0D9488] outline-none transition-all placeholder:text-[#94A3B8]" placeholder="Tìm kiếm Người Tin Cậy, Khoá mã hoá, Quyền hạn..." type="text"/>
+<span class="absolute right-2.5 top-2.5 px-1.5 py-0.5 border border-[#E2E8F0] rounded text-[10px] font-mono text-[#94A3B8] bg-[#F8FAFC]">⌘K</span>
+</div>
+</div>
+<!-- Center: Institutional Navigation Links -->
+<nav class="hidden lg:flex items-center gap-6">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-body-md text-body-md hover:text-on-surface dark:hover:text-on-surface transition-colors duration-150 flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[16px]" data-icon="account_balance">account_balance</span>
+<span>Governance Ledger</span>
+</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-body-md text-body-md hover:text-on-surface dark:hover:text-on-surface transition-colors duration-150 flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[16px]" data-icon="history_toggle_off">history_toggle_off</span>
+<span>Audit Trail</span>
+</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-body-md text-body-md hover:text-on-surface dark:hover:text-on-surface transition-colors duration-150 flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[16px]" data-icon="key">key</span>
+<span>Encrypted Vault</span>
+</a>
+</nav>
+<!-- Right: Actions, Notifications & Executive Avatar Profile -->
+<div class="flex items-center gap-3">
+<button class="h-9 px-3 bg-[#FFFFFF] hover:bg-[#F8FAFC] text-[#0F172A] border border-[#E2E8F0] hover:border-[#CBD5E1] rounded text-title-sm font-title-sm flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-[#475569]" data-icon="download">download</span>
+<span>Export Plan</span>
+</button>
+<button class="h-9 px-3.5 bg-[#D97706] hover:bg-[#B45309] text-white rounded text-title-sm font-title-sm flex items-center gap-1.5 border border-[#D97706] transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px]" data-icon="emergency">emergency</span>
+<span>Emergency Handover</span>
+</button>
+<div class="h-5 w-px bg-[#E2E8F0] mx-1"></div>
+<div class="flex items-center gap-1 text-[#475569]">
+<button class="p-1.5 hover:bg-surface-container-low rounded-full transition-colors relative" title="Notifications">
+<span class="material-symbols-outlined text-[20px]" data-icon="notifications">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-[#0D9488] rounded-full ring-2 ring-white"></span>
+</button>
+<button class="p-1.5 hover:bg-surface-container-low rounded-full transition-colors" title="Institutional Shield">
+<span class="material-symbols-outlined text-[20px]" data-icon="shield">shield</span>
+</button>
+<button class="p-1.5 hover:bg-surface-container-low rounded-full transition-colors" title="Support &amp; Legal Docs">
+<span class="material-symbols-outlined text-[20px]" data-icon="help_outline">help_outline</span>
+</button>
+</div>
+<!-- Avatar -->
+<div class="flex items-center gap-2 pl-2">
+<div class="w-8 h-8 rounded-full bg-[#0B132B] text-white flex items-center justify-center font-bold text-label-md border border-[#CBD5E1]" title="Executive Founder Avatar">
+              TL
+            </div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Workspace Container -->
+<main class="flex-1 max-w-[80rem] w-full mx-auto p-8 space-y-8">
+<!-- Workspace Header Block -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#E2E8F0] pb-6">
+<div class="space-y-2 max-w-3xl">
+<div class="flex items-center gap-3">
+<h1 class="font-headline-lg text-headline-lg text-[#0B132B] tracking-tight">Hội đồng Tiếp quản &amp; Người Tin Cậy (Trusted People)</h1>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#F0FDFA] text-[#0F766E] border border-[#CCFBF1] text-label-sm font-label-sm">
+<span class="badge-dot bg-[#0D9488]"></span>
+<span>3/3 Thành viên chính thức (Đạt hạn mức MVP)</span>
+</div>
+</div>
+<p class="font-body-lg text-body-lg text-[#475569] leading-relaxed">
+            Không một người nào cần biết toàn bộ cuộc sống của bạn - mỗi người chỉ tiếp nhận đúng phần trách nhiệm được chỉ định.
+          </p>
+</div>
+<div class="flex items-center gap-2 flex-shrink-0">
+<button class="h-10 px-4 bg-[#FFFFFF] hover:bg-[#F8FAFC] text-[#0F172A] border border-[#E2E8F0] hover:border-[#CBD5E1] rounded text-title-sm font-title-sm flex items-center gap-2 transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="lock_reset">lock_reset</span>
+<span>Khôi phục Khóa Master</span>
+</button>
+<button class="h-10 px-4 bg-[#0B132B] hover:bg-[#1C2541] text-[#FFFFFF] rounded text-title-sm font-title-sm flex items-center gap-2 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-[#86F2E4]" data-icon="person_add">person_add</span>
+<span>Ủy thác thêm thành viên</span>
+</button>
+</div>
+</div>
+<!-- Core Banner: Zero-Knowledge Handover Principle -->
+<div class="bg-[#0B132B] text-white rounded-lg p-6 border border-[#1E293B] shadow-sm relative overflow-hidden">
+<!-- Subtle Grid Pattern Accent -->
+<div class="absolute -right-8 -bottom-10 opacity-10 pointer-events-none text-[#86F2E4]">
+<span class="material-symbols-outlined text-[200px]" data-icon="enhanced_encryption">enhanced_encryption</span>
+</div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded bg-[#1C2541] border border-[#334155] flex items-center justify-center flex-shrink-0 text-[#86F2E4]">
+<span class="material-symbols-outlined text-[26px]" data-icon="security" data-weight="fill" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-3">
+<span class="text-label-sm font-label-sm tracking-widest text-[#86F2E4] uppercase">Nguyên tắc Bảo mật Tối cao</span>
+<span class="text-xs px-2 py-0.5 rounded bg-[#1C2541] text-[#CBD5E1] border border-[#334155] font-mono">E2EE v2.4</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-white font-semibold">Nguyên tắc Phân quyền &amp; Cô lập trách nhiệm (Zero-Knowledge Handover)</h2>
+<p class="font-body-md text-body-md text-[#94A3B8] max-w-3xl">
+                Người được chỉ định <span class="text-white font-medium underline underline-offset-4 decoration-[#0D9488]">hoàn toàn không thể xem dữ liệu</span>, khóa cá nhân hoặc tài sản uỷ thác cho đến khi Kế hoạch được kích hoạt an toàn qua cơ chế xác minh 2 lớp và hoàn tất thời gian chờ quyền phủ quyết (Grace Period).
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-[#131A33] px-4 py-3 rounded border border-[#1E293B] flex-shrink-0">
+<div class="text-right">
+<div class="text-label-sm font-label-sm text-[#94A3B8]">Mã băm đồng thuận</div>
+<div class="font-mono text-xs text-[#86F2E4]">0x7F4A...B839 (2/3 Sig)</div>
+</div>
+<div class="w-px h-8 bg-[#334155]"></div>
+<div class="flex -space-x-2">
+<div class="w-7 h-7 rounded-full bg-[#0D9488] text-white flex items-center justify-center text-[10px] font-bold border-2 border-[#0B132B]" title="MP - Nguyễn Mai Phương">MP</div>
+<div class="w-7 h-7 rounded-full bg-[#1C2541] text-white flex items-center justify-center text-[10px] font-bold border-2 border-[#0B132B]" title="TA - Trần Tuấn Anh">TA</div>
+<div class="w-7 h-7 rounded-full bg-[#D97706] text-white flex items-center justify-center text-[10px] font-bold border-2 border-[#0B132B]" title="LĐ - LS. Lê Trọng Đức">LĐ</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 1: 3 Person Cards (Executive Bento Layout) -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="font-title-md text-title-md text-[#0B132B] flex items-center gap-2">
+<span>Danh sách Thành viên Hội đồng Tiếp quản</span>
+<span class="text-xs text-[#64748B] font-normal">(3 hồ sơ được bảo hộ pháp lý)</span>
+</h2>
+<span class="text-body-sm font-body-sm text-[#64748B]">Cập nhật lần cuối: Hôm nay, 09:42 SA</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Card 1: Nguyễn Mai Phương (Gia đình) -->
+<div class="bg-surface-container-lowest rounded-lg border border-[#E2E8F0] shadow-[0_1px_2px_0_rgba(15,23,42,0.04)] flex flex-col justify-between hover:border-[#CBD5E1] transition-all duration-200">
+<!-- Card Header -->
+<div class="p-6 border-b border-[#F1F5F9] space-y-4">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-[#F0FDFA] border border-[#CCFBF1] flex items-center justify-center text-[#0F766E] font-bold text-title-md">
+                    MP
+                  </div>
+<div>
+<h3 class="font-title-md text-title-md text-[#0B132B]">Nguyễn Mai Phương</h3>
+<p class="font-body-sm text-body-sm text-[#64748B]">Vợ (Người thụ hưởng gia đình)</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-[#F0FDFA] text-[#0F766E] border border-[#CCFBF1] text-label-sm font-label-sm">
+<span class="badge-dot bg-[#0D9488]"></span>
+<span>Đã xác nhận tham gia</span>
+</span>
+</div>
+<div class="p-3 bg-[#F8FAFC] rounded border border-[#E2E8F0] space-y-1">
+<div class="text-label-sm font-label-sm text-[#475569] uppercase tracking-wider">Vai trò chính</div>
+<div class="font-title-sm text-title-sm text-[#0B132B] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-[#0D9488]" data-icon="cottage">cottage</span>
+<span>Tiếp quản Gia đình &amp; Tài chính cá nhân</span>
+</div>
+</div>
+</div>
+<!-- Card Body / Delegation Scope -->
+<div class="p-6 space-y-4 flex-1">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="text-label-sm font-label-sm text-[#64748B] uppercase tracking-wider">Phạm vi uỷ thác (5 thẻ tài sản)</span>
+<span class="text-[11px] font-mono text-[#0D9488] font-semibold">100% Khóa sẵn sàng</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded bg-[#F1F5F9] text-[#334155] text-body-sm font-body-sm border border-[#E2E8F0] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-[#64748B]" data-icon="real_estate_agent">real_estate_agent</span>
+                    Bất động sản (2)
+                  </span>
+<span class="px-2.5 py-1 rounded bg-[#F1F5F9] text-[#334155] text-body-sm font-body-sm border border-[#E2E8F0] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-[#64748B]" data-icon="school">school</span>
+                    Học phí con cái
+                  </span>
+<span class="px-2.5 py-1 rounded bg-[#F1F5F9] text-[#334155] text-body-sm font-body-sm border border-[#E2E8F0] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-[#64748B]" data-icon="health_and_safety">health_and_safety</span>
+                    Bảo hiểm nhân thọ
+                  </span>
+<span class="px-2.5 py-1 rounded bg-[#F1F5F9] text-[#334155] text-body-sm font-body-sm border border-[#E2E8F0] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-[#64748B]" data-icon="savings">savings</span>
+                    Tài khoản sinh hoạt
+                  </span>
+</div>
+</div>
+<!-- Emergency Specific Privilege -->
+<div class="pt-2 border-t border-[#F1F5F9]">
+<div class="text-label-sm font-label-sm text-[#64748B] mb-1">Quyền khẩn cấp được phê duyệt:</div>
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-[#0B132B]">
+<span class="material-symbols-outlined text-[16px] text-[#0D9488]" data-icon="notification_important">notification_important</span>
+<span>Nhận cảnh báo Check-in Cấp 1, Giám hộ tài sản</span>
+</div>
+</div>
+</div>
+<!-- Card Footer -->
+<div class="px-6 py-3 bg-[#F8FAFC] border-t border-[#F1F5F9] flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-1.5 text-[#64748B] font-mono text-[11px]">
+<span class="material-symbols-outlined text-[14px]" data-icon="vpn_key">vpn_key</span>
+<span>Mã xác thực: SHA-256-F1</span>
+</div>
+<button class="text-[#0D9488] hover:text-[#0F766E] font-title-sm text-title-sm flex items-center gap-0.5">
+<span>Chi tiết quyền</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Trần Tuấn Anh (Vận hành Doanh nghiệp) -->
+<div class="bg-surface-container-lowest rounded-lg border border-[#E2E8F0] shadow-[0_1px_2px_0_rgba(15,23,42,0.04)] flex flex-col justify-between hover:border-[#CBD5E1] transition-all duration-200">
+<!-- Card Header -->
+<div class="p-6 border-b border-[#F1F5F9] space-y-4">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-[#F0FDFA] border border-[#CCFBF1] flex items-center justify-center text-[#0F766E] font-bold text-title-md">
+                    TA
+                  </div>
+<div>
+<h3 class="font-title-md text-title-md text-[#0B132B]">Trần Tuấn Anh</h3>
+<p class="font-body-sm text-body-sm text-[#64748B]">Đồng sáng lập &amp; Cố vấn điều hành</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-[#F0FDFA] text-[#0F766E] border border-[#CCFBF1] text-label-sm font-label-sm">
+<span class="badge-dot bg-[#0D9488]"></span>
+<span>Đã xác nhận tham gia</span>
+</span>
+</div>
+<div class="p-3 bg-[#F8FAFC] rounded border border-[#E2E8F0] space-y-1">
+<div class="text-label-sm font-label-sm text-[#475569] uppercase tracking-wider">Vai trò chính</div>
+<div class="font-title-sm text-title-sm text-[#0B132B] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-[#0D9488]" data-icon="domain">domain</span>
+<span>Tiếp quản Vận hành Doanh nghiệp</span>
+</div>
+</div>
+</div>
+<!-- Card Body / Delegation Scope -->
+<div class="p-6 space-y-4 flex-1">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="text-label-sm font-label-sm text-[#64748B] uppercase tracking-wider">Phạm vi uỷ thác (4 thẻ vận hành)</span>
+<span class="text-[11px] font-mono text-[#0D9488] font-semibold">Bàn giao tự động</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded bg-[#F1F5F9] text-[#334155] text-body-sm font-body-sm border border-[#E2E8F0] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-[#64748B]" data-icon="payments">payments</span>
+                    Dòng tiền kinh doanh
+                  </span>
+<span class="px-2.5 py-1 rounded bg-[#F1F5F9] text-[#334155] text-body-sm font-body-sm border border-[#E2E8F0] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-[#64748B]" data-icon="badge">badge</span>
+                    Khách hàng trọng điểm
+                  </span>
+<span class="px-2.5 py-1 rounded bg-[#F1F5F9] text-[#334155] text-body-sm font-body-sm border border-[#E2E8F0] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-[#64748B]" data-icon="groups">groups</span>
+                    Lương nhân sự
+                  </span>
+<span class="px-2.5 py-1 rounded bg-[#F1F5F9] text-[#334155] text-body-sm font-body-sm border border-[#E2E8F0] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-[#64748B]" data-icon="handshake">handshake</span>
+                    Hợp đồng đối tác
+                  </span>
+</div>
+</div>
+<!-- Privacy Boundary -->
+<div class="pt-2 border-t border-[#F1F5F9]">
+<div class="text-label-sm font-label-sm text-[#64748B] mb-1">Giới hạn bảo mật nghiêm ngặt:</div>
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-[#B45309] bg-[#FFFBEB] px-2.5 py-1.5 rounded border border-[#FEF3C7]">
+<span class="material-symbols-outlined text-[16px] text-[#D97706]" data-icon="block">block</span>
+<span class="font-medium">Hoàn toàn KHÔNG xem được tài sản cá nhân và gia đình.</span>
+</div>
+</div>
+</div>
+<!-- Card Footer -->
+<div class="px-6 py-3 bg-[#F8FAFC] border-t border-[#F1F5F9] flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-1.5 text-[#64748B] font-mono text-[11px]">
+<span class="material-symbols-outlined text-[14px]" data-icon="vpn_key">vpn_key</span>
+<span>Mã xác thực: SHA-256-B2</span>
+</div>
+<button class="text-[#0D9488] hover:text-[#0F766E] font-title-sm text-title-sm flex items-center gap-0.5">
+<span>Chi tiết quyền</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 3: LS. Lê Trọng Đức (Pháp lý) -->
+<div class="bg-surface-container-lowest rounded-lg border border-[#E2E8F0] shadow-[0_1px_2px_0_rgba(15,23,42,0.04)] flex flex-col justify-between hover:border-[#CBD5E1] transition-all duration-200">
+<!-- Card Header -->
+<div class="p-6 border-b border-[#F1F5F9] space-y-4">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-[#FFFBEB] border border-[#FEF3C7] flex items-center justify-center text-[#B45309] font-bold text-title-md">
+                    LĐ
+                  </div>
+<div>
+<h3 class="font-title-md text-title-md text-[#0B132B]">LS. Lê Trọng Đức</h3>
+<p class="font-body-sm text-body-sm text-[#64748B]">Luật sư riêng &amp; Cố vấn pháp lý</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-[#FFFBEB] text-[#B45309] border border-[#FEF3C7] text-label-sm font-label-sm">
+<span class="badge-dot bg-[#D97706] animate-pulse"></span>
+<span>Đang kết nối khóa cá nhân</span>
+</span>
+</div>
+<div class="p-3 bg-[#F8FAFC] rounded border border-[#E2E8F0] space-y-1">
+<div class="text-label-sm font-label-sm text-[#475569] uppercase tracking-wider">Vai trò chính</div>
+<div class="font-title-sm text-title-sm text-[#0B132B] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-[#0D9488]" data-icon="gavel">gavel</span>
+<span>Tiếp quản Hồ sơ Pháp lý &amp; Hợp đồng gốc</span>
+</div>
+</div>
+</div>
+<!-- Card Body / Delegation Scope -->
+<div class="p-6 space-y-4 flex-1">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="text-label-sm font-label-sm text-[#64748B] uppercase tracking-wider">Phạm vi uỷ thác (3 thẻ pháp lý)</span>
+<span class="text-[11px] font-mono text-[#D97706] font-semibold">Chờ xác thực HSM</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded bg-[#F1F5F9] text-[#334155] text-body-sm font-body-sm border border-[#E2E8F0] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-[#64748B]" data-icon="article">article</span>
+                    Đăng ký kinh doanh
+                  </span>
+<span class="px-2.5 py-1 rounded bg-[#F1F5F9] text-[#334155] text-body-sm font-body-sm border border-[#E2E8F0] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-[#64748B]" data-icon="account_balance">account_balance</span>
+                    Hồ sơ thế chấp
+                  </span>
+<span class="px-2.5 py-1 rounded bg-[#F1F5F9] text-[#334155] text-body-sm font-body-sm border border-[#E2E8F0] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-[#64748B]" data-icon="assignment_late">assignment_late</span>
+                    Di chúc sơ bộ
+                  </span>
+</div>
+</div>
+<!-- Security Status -->
+<div class="pt-2 border-t border-[#F1F5F9]">
+<div class="text-label-sm font-label-sm text-[#64748B] mb-1">Trạng thái khóa bảo mật:</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm bg-[#F8FAFC] px-2.5 py-1.5 rounded border border-[#E2E8F0]">
+<span class="text-[#475569]">Yêu cầu gửi qua YubiKey 5C</span>
+<span class="text-xs font-mono font-medium text-[#B45309]">CHỜ KÝ SỐ</span>
+</div>
+</div>
+</div>
+<!-- Card Footer -->
+<div class="px-6 py-3 bg-[#F8FAFC] border-t border-[#F1F5F9] flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-1.5 text-[#64748B] font-mono text-[11px]">
+<span class="material-symbols-outlined text-[14px]" data-icon="vpn_key">vpn_key</span>
+<span>Mã xác thực: SHA-256-L3</span>
+</div>
+<button class="text-[#0D9488] hover:text-[#0F766E] font-title-sm text-title-sm flex items-center gap-0.5">
+<span>Gửi lại lời mời</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Multi-Sig Handover Protocol Diagram (Shamir Secret Sharing) -->
+<section class="bg-surface-container-lowest rounded-lg border border-[#E2E8F0] p-6 shadow-[0_1px_2px_0_rgba(15,23,42,0.04)] space-y-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#F1F5F9] pb-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-[#0D9488]" data-icon="schema">schema</span>
+<h2 class="font-headline-sm text-headline-sm text-[#0B132B]">Cơ chế Kích hoạt Kế hoạch Khẩn cấp (Multi-Sig Handover Protocol - Shamir Secret Sharing)</h2>
+</div>
+<p class="font-body-sm text-body-sm text-[#64748B]">
+              Quy trình giải mã khóa phân tán 3-trong-1 bảo đảm không một ai có thể đơn phương tiếp cận kho dữ liệu nhạy cảm.
+            </p>
+</div>
+<div class="flex items-center gap-2 bg-[#F0FDFA] border border-[#CCFBF1] px-3 py-1.5 rounded">
+<span class="material-symbols-outlined text-[18px] text-[#0D9488]" data-icon="verified">verified</span>
+<span class="text-label-md font-label-md text-[#0F766E]">Thuật toán Shamir m/n = 2/3</span>
+</div>
+</div>
+<!-- Visual Multi-Step Validation Architecture Diagram -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+<!-- Step 1 -->
+<div class="p-4 rounded-lg bg-[#F8FAFC] border border-[#E2E8F0] space-y-3 relative group hover:border-[#0D9488] transition-all">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-[#0B132B] text-white text-[11px] font-bold flex items-center justify-center">1</span>
+<span class="text-[10px] font-mono text-[#0D9488] font-bold uppercase bg-[#F0FDFA] px-2 py-0.5 rounded border border-[#CCFBF1]">Tự động hoá</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-[#0B132B]">3 Chu kỳ Check-in không phản hồi</h3>
+<p class="font-body-sm text-body-sm text-[#64748B] mt-1 leading-normal">
+                Hệ thống gửi ping định kỳ qua SMS/Email/App trong 14 ngày. Nếu không có mã xác nhận, trạng thái chuyển sang Khẩn cấp.
+              </p>
+</div>
+<div class="pt-2 border-t border-[#E2E8F0] flex items-center justify-between text-[11px] text-[#475569]">
+<span class="font-mono">14 Ngày (3x Ping)</span>
+<span class="text-[#0D9488] font-semibold flex items-center gap-1">
+<span class="badge-dot bg-[#0D9488]"></span> Đang giám sát
+              </span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="p-4 rounded-lg bg-[#F8FAFC] border border-[#E2E8F0] space-y-3 relative group hover:border-[#0D9488] transition-all">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-[#0B132B] text-white text-[11px] font-bold flex items-center justify-center">2</span>
+<span class="text-[10px] font-mono text-[#B45309] font-bold uppercase bg-[#FFFBEB] px-2 py-0.5 rounded border border-[#FEF3C7]">Multi-Sig 2/3</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-[#0B132B]">Đồng thuận 2/3 chữ ký số</h3>
+<p class="font-body-sm text-body-sm text-[#64748B] mt-1 leading-normal">
+                Cần ít nhất 2 trong 3 Người Tin Cậy cung cấp mảnh khóa bí mật và xác thực sinh trắc học hoặc phần cứng FIDO2.
+              </p>
+</div>
+<div class="pt-2 border-t border-[#E2E8F0] flex items-center justify-between text-[11px] text-[#475569]">
+<span class="font-mono">Ngưỡng: 2 Phê chuẩn</span>
+<span class="text-[#64748B]">Shamir Shares</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="p-4 rounded-lg bg-[#F8FAFC] border border-[#E2E8F0] space-y-3 relative group hover:border-[#0D9488] transition-all">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-[#0B132B] text-white text-[11px] font-bold flex items-center justify-center">3</span>
+<span class="text-[10px] font-mono text-[#475569] font-bold uppercase bg-[#F1F5F9] px-2 py-0.5 rounded border border-[#CBD5E1]">Chứng thực</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-[#0B132B]">Đính kèm Giấy tờ y tế / Pháp lý</h3>
+<p class="font-body-sm text-body-sm text-[#64748B] mt-1 leading-normal">
+                Luật sư hoặc Người bảo hộ tải lên biên bản y khoa chính thống hoặc xác nhận tình trạng bất khả kháng theo luật định.
+              </p>
+</div>
+<div class="pt-2 border-t border-[#E2E8F0] flex items-center justify-between text-[11px] text-[#475569]">
+<span class="font-mono">Tải lên tài liệu PDF</span>
+<span class="text-[#475569]">Audit lưu trữ</span>
+</div>
+</div>
+<!-- Step 4 / Grace Period Shield -->
+<div class="p-4 rounded-lg bg-[#FFFBEB] border border-[#FEF3C7] space-y-3 relative group hover:border-[#D97706] transition-all">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-[#D97706] text-white text-[11px] font-bold flex items-center justify-center">!</span>
+<span class="text-[10px] font-mono text-[#B45309] font-bold uppercase bg-[#FEF3C7] px-2 py-0.5 rounded border border-[#FDE68A]">Grace Period</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-[#B45309]">Thời gian chờ hủy bỏ: 72 Giờ</h3>
+<p class="font-body-sm text-body-sm text-[#78350F] mt-1 leading-normal">
+                Chủ sở hữu có quyền phủ quyết tối cao (Veto Privilege) bằng 1 chạm để hủy bỏ quy trình nếu việc kích hoạt là nhầm lẫn.
+              </p>
+</div>
+<div class="pt-2 border-t border-[#FEF3C7] flex items-center justify-between text-[11px] text-[#92400E]">
+<span class="font-mono font-bold">72 Giờ Đếm Ngược</span>
+<span class="font-semibold text-[#B45309]">QUYỀN PHỦ QUYẾT</span>
+</div>
+</div>
+</div>
+<!-- Protocol Technical Footer Note -->
+<div class="p-3 bg-[#F8FAFC] rounded border border-[#E2E8F0] flex items-center justify-between text-body-sm font-body-sm text-[#475569]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-[#0D9488]" data-icon="terminal">terminal</span>
+<span class="font-mono text-xs">Mô hình phân mảnh khóa: SSS_256 (3 Shares Created, Threshold = 2, Air-gapped Backup Vault)</span>
+</div>
+<a class="text-[#0D9488] hover:underline font-title-sm text-title-sm flex items-center gap-1" href="#">
+<span>Kiểm tra chữ ký số công khai</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+</section>
+<!-- Section 3: Access Ledger Table (Ma Trận Phân Quyền & Phạm Vi Ủy Thác) -->
+<section class="bg-surface-container-lowest rounded-lg border border-[#E2E8F0] shadow-[0_1px_2px_0_rgba(15,23,42,0.04)] overflow-hidden space-y-0">
+<!-- Table Control Header -->
+<div class="p-6 border-b border-[#E2E8F0] flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-[#0B132B] flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-[#0D9488]" data-icon="table_chart">table_chart</span>
+<span>Ma Trận Phân Quyền &amp; Phạm Vi Ủy Thác (Access Ledger Table)</span>
+</h2>
+<p class="font-body-sm text-body-sm text-[#64748B] mt-0.5">
+              Bảng ánh xạ trực tiếp phạm vi tiếp cận tài sản giữa các thành viên Hội đồng. Không có quyền thừa kế mặc định.
+            </p>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5 text-xs text-[#64748B] bg-[#F8FAFC] px-3 py-1.5 rounded border border-[#E2E8F0]">
+<span class="w-2.5 h-2.5 rounded-full bg-[#0D9488]"></span> Toàn quyền
+              <span class="w-2.5 h-2.5 rounded-full bg-[#475569] ml-2"></span> Chỉ đọc tham chiếu
+              <span class="w-2.5 h-2.5 rounded-full bg-[#E2E8F0] ml-2"></span> Không cấp quyền
+            </div>
+<button class="h-9 px-3 bg-[#FFFFFF] hover:bg-[#F8FAFC] text-[#0F172A] border border-[#E2E8F0] hover:border-[#CBD5E1] rounded text-title-sm font-title-sm flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-[#475569]" data-icon="file_download">file_download</span>
+<span>Xuất Audit Log (CSV/PDF)</span>
+</button>
+</div>
+</div>
+<!-- Table View -->
+<div class="overflow-x-auto custom-scrollbar">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#F8FAFC] border-b border-[#E2E8F0] text-label-md font-label-md text-[#475569]">
+<th class="py-3 px-6 font-semibold w-1/3">Phân nhóm Tài sản &amp; Danh mục (Asset Domains)</th>
+<th class="py-3 px-6 font-semibold text-center border-l border-[#E2E8F0]">
+<div class="flex items-center justify-center gap-1.5">
+<span class="w-5 h-5 rounded bg-[#CCFBF1] text-[#0F766E] text-[10px] font-bold flex items-center justify-center">MP</span>
+<span>Nguyễn Mai Phương</span>
+</div>
+</th>
+<th class="py-3 px-6 font-semibold text-center border-l border-[#E2E8F0]">
+<div class="flex items-center justify-center gap-1.5">
+<span class="w-5 h-5 rounded bg-[#E2E8F0] text-[#0B132B] text-[10px] font-bold flex items-center justify-center">TA</span>
+<span>Trần Tuấn Anh</span>
+</div>
+</th>
+<th class="py-3 px-6 font-semibold text-center border-l border-[#E2E8F0]">
+<div class="flex items-center justify-center gap-1.5">
+<span class="w-5 h-5 rounded bg-[#FEF3C7] text-[#B45309] text-[10px] font-bold flex items-center justify-center">LĐ</span>
+<span>LS. Lê Trọng Đức</span>
+</div>
+</th>
+<th class="py-3 px-6 font-semibold text-right border-l border-[#E2E8F0]">Kiểm toán</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#E2E8F0] text-body-md font-body-md">
+<!-- Row 1: Bất động sản gia đình -->
+<tr class="hover:bg-[#F8FAFC] transition-colors">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-[#F1F5F9] text-[#0B132B] flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]" data-icon="house">house</span>
+</div>
+<div>
+<div class="font-title-sm text-title-sm text-[#0B132B]">Bất động sản gia đình &amp; Sổ đỏ</div>
+<div class="text-xs text-[#64748B]">2 Căn hộ, 1 Khu nghỉ dưỡng (Kèm hợp đồng gửi két)</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 text-center border-l border-[#E2E8F0]">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-[#F0FDFA] text-[#0F766E] border border-[#CCFBF1] text-label-sm font-label-sm font-semibold">
+<span class="badge-dot bg-[#0D9488]"></span> Toàn quyền
+                  </span>
+</td>
+<td class="py-4 px-6 text-center border-l border-[#E2E8F0]">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#F1F5F9] text-[#94A3B8] text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="remove">remove</span> Không cấp quyền
+                  </span>
+</td>
+<td class="py-4 px-6 text-center border-l border-[#E2E8F0]">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-[#F8FAFC] text-[#475569] border border-[#E2E8F0] text-label-sm font-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px] text-[#64748B]" data-icon="visibility">visibility</span> Chỉ đọc tham chiếu
+                  </span>
+</td>
+<td class="py-4 px-6 text-right border-l border-[#E2E8F0] font-mono text-xs text-[#64748B]">
+                  SEC-REC-4921
+                </td>
+</tr>
+<!-- Row 2: Tài khoản Vận hành Doanh nghiệp & Payroll -->
+<tr class="hover:bg-[#F8FAFC] transition-colors">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-[#F1F5F9] text-[#0B132B] flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]" data-icon="account_balance_wallet">account_balance_wallet</span>
+</div>
+<div>
+<div class="font-title-sm text-title-sm text-[#0B132B]">Dòng tiền Doanh nghiệp &amp; Lương nhân viên</div>
+<div class="text-xs text-[#64748B]">Tài khoản Techcombank &amp; Vietcombank Corporate</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 text-center border-l border-[#E2E8F0]">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#F1F5F9] text-[#94A3B8] text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="remove">remove</span> Không cấp quyền
+                  </span>
+</td>
+<td class="py-4 px-6 text-center border-l border-[#E2E8F0]">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-[#F0FDFA] text-[#0F766E] border border-[#CCFBF1] text-label-sm font-label-sm font-semibold">
+<span class="badge-dot bg-[#0D9488]"></span> Toàn quyền
+                  </span>
+</td>
+<td class="py-4 px-6 text-center border-l border-[#E2E8F0]">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-[#F8FAFC] text-[#475569] border border-[#E2E8F0] text-label-sm font-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px] text-[#64748B]" data-icon="visibility">visibility</span> Chỉ đọc tham chiếu
+                  </span>
+</td>
+<td class="py-4 px-6 text-right border-l border-[#E2E8F0] font-mono text-xs text-[#64748B]">
+                  SEC-REC-4922
+                </td>
+</tr>
+<!-- Row 3: Cổ phần Sáng lập & Thỏa thuận Cổ đông (Cap Table) -->
+<tr class="hover:bg-[#F8FAFC] transition-colors">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-[#F1F5F9] text-[#0B132B] flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]" data-icon="pie_chart">pie_chart</span>
+</div>
+<div>
+<div class="font-title-sm text-title-sm text-[#0B132B]">Cổ phần Công ty &amp; Thỏa thuận Cổ đông</div>
+<div class="text-xs text-[#64748B]">Tỷ lệ biểu quyết 51%, Quyền biểu quyết kế vị</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 text-center border-l border-[#E2E8F0]">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-[#F8FAFC] text-[#475569] border border-[#E2E8F0] text-label-sm font-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px] text-[#64748B]" data-icon="visibility">visibility</span> Chỉ đọc tham chiếu
+                  </span>
+</td>
+<td class="py-4 px-6 text-center border-l border-[#E2E8F0]">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-[#F0FDFA] text-[#0F766E] border border-[#CCFBF1] text-label-sm font-label-sm font-semibold">
+<span class="badge-dot bg-[#0D9488]"></span> Toàn quyền
+                  </span>
+</td>
+<td class="py-4 px-6 text-center border-l border-[#E2E8F0]">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-[#F0FDFA] text-[#0F766E] border border-[#CCFBF1] text-label-sm font-label-sm font-semibold">
+<span class="badge-dot bg-[#0D9488]"></span> Toàn quyền
+                  </span>
+</td>
+<td class="py-4 px-6 text-right border-l border-[#E2E8F0] font-mono text-xs text-[#64748B]">
+                  SEC-REC-4923
+                </td>
+</tr>
+<!-- Row 4: Quỹ Học vấn Trẻ em & Hợp đồng Bảo hiểm Nhân thọ -->
+<tr class="hover:bg-[#F8FAFC] transition-colors">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-[#F1F5F9] text-[#0B132B] flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]" data-icon="family_restroom">family_restroom</span>
+</div>
+<div>
+<div class="font-title-sm text-title-sm text-[#0B132B]">Học phí con cái &amp; Bảo hiểm Prudential</div>
+<div class="text-xs text-[#64748B]">Khoản bảo hiểm 20 Tỷ VND &amp; Quỹ du học riêng biệt</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 text-center border-l border-[#E2E8F0]">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-[#F0FDFA] text-[#0F766E] border border-[#CCFBF1] text-label-sm font-label-sm font-semibold">
+<span class="badge-dot bg-[#0D9488]"></span> Toàn quyền
+                  </span>
+</td>
+<td class="py-4 px-6 text-center border-l border-[#E2E8F0]">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#F1F5F9] text-[#94A3B8] text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="remove">remove</span> Không cấp quyền
+                  </span>
+</td>
+<td class="py-4 px-6 text-center border-l border-[#E2E8F0]">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-[#F8FAFC] text-[#475569] border border-[#E2E8F0] text-label-sm font-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px] text-[#64748B]" data-icon="visibility">visibility</span> Chỉ đọc tham chiếu
+                  </span>
+</td>
+<td class="py-4 px-6 text-right border-l border-[#E2E8F0] font-mono text-xs text-[#64748B]">
+                  SEC-REC-4924
+                </td>
+</tr>
+<!-- Row 5: Két sắt Vật lý & Di chúc Lưu ký Pháp lý -->
+<tr class="hover:bg-[#F8FAFC] transition-colors">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-[#F1F5F9] text-[#0B132B] flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]" data-icon="lock">lock</span>
+</div>
+<div>
+<div class="font-title-sm text-title-sm text-[#0B132B]">Két sắt gia đình &amp; Bản di chúc gốc</div>
+<div class="text-xs text-[#64748B]">Văn bản thừa kế lập tại Văn phòng Công chứng số 1</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 text-center border-l border-[#E2E8F0]">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-[#F8FAFC] text-[#475569] border border-[#E2E8F0] text-label-sm font-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px] text-[#64748B]" data-icon="visibility">visibility</span> Chỉ đọc tham chiếu
+                  </span>
+</td>
+<td class="py-4 px-6 text-center border-l border-[#E2E8F0]">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#F1F5F9] text-[#94A3B8] text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="remove">remove</span> Không cấp quyền
+                  </span>
+</td>
+<td class="py-4 px-6 text-center border-l border-[#E2E8F0]">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-[#F0FDFA] text-[#0F766E] border border-[#CCFBF1] text-label-sm font-label-sm font-semibold">
+<span class="badge-dot bg-[#0D9488]"></span> Toàn quyền
+                  </span>
+</td>
+<td class="py-4 px-6 text-right border-l border-[#E2E8F0] font-mono text-xs text-[#64748B]">
+                  SEC-REC-4925
+                </td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Pagination & Ledger Hash -->
+<div class="p-4 bg-[#F8FAFC] border-t border-[#E2E8F0] flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-body-sm font-body-sm text-[#64748B]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-[#0D9488]" data-icon="fingerprint">fingerprint</span>
+<span class="font-mono text-xs">Mã băm bảng phân quyền: 0x9B82C4...77EF8 (Khóa bất biến)</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs">Hiển thị 5/5 Danh mục ủy thác</span>
+<button class="text-[#0D9488] hover:text-[#0F766E] font-title-sm text-title-sm flex items-center gap-1">
+<span>Chỉnh sửa chính sách toàn cục</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="tune">tune</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Bottom Executive Safeguard Footer -->
+<footer class="pt-4 pb-8 border-t border-[#E2E8F0] flex flex-col md:flex-row md:items-center justify-between gap-4 text-body-sm font-body-sm text-[#94A3B8]">
+<div class="flex items-center gap-4">
+<span class="font-semibold text-[#475569]">Asseta Continuity Protocol © 2025</span>
+<span>•</span>
+<a class="hover:text-[#475569] transition-colors" href="#">Điều khoản Fiduciary</a>
+<span>•</span>
+<a class="hover:text-[#475569] transition-colors" href="#">Chính sách Zero-Knowledge</a>
+<span>•</span>
+<a class="hover:text-[#475569] transition-colors" href="#">Báo cáo Kiểm toán Ernst &amp; Young</a>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#0D9488]"></span>
+<span class="font-mono text-xs text-[#475569]">SECURE VAULT RUNNING: NODE_VN_01 (LATENCY: 12ms)</span>
+</div>
+</footer>
+</main>
+</div>
+<script>
+    // Lightweight atmospheric toast interaction for protocol readiness verification
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('Asseta Continuity System: Trusted People & Multi-Sig Protocol Loaded.');
+    });
+  </script>
+</body></html>
