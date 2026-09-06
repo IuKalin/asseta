@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Lock, Mail, User as UserIcon, Phone, ShieldCheck, ArrowRight, AlertCircle, Loader2, KeyRound } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
+import { getErrorMessage } from '../../utils/errorUtils';
 
 interface RegisterPageProps {
   onNavigateToLogin: () => void;
@@ -43,7 +44,7 @@ export const RegisterPage: React.FC<RegisterPageProps> = ({ onNavigateToLogin })
         phoneNumber: phoneNumber.trim() || undefined,
       });
     } catch (err: any) {
-      const msg = err.response?.data?.message || err.message || 'Đăng ký thất bại. Vui lòng thử lại.';
+      const msg = getErrorMessage(err, 'Đăng ký thất bại. Vui lòng thử lại.');
       setError(msg);
     } finally {
       setIsSubmitting(false);

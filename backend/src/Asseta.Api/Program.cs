@@ -2,6 +2,9 @@ using System.Text;
 using System.Text.Json.Serialization;
 using Asseta.Api.Middlewares;
 using Asseta.Application;
+using Asseta.Application.Common.Interfaces;
+using Asseta.Application.Common.Security;
+using Asseta.Domain.Entities;
 using Asseta.Infrastructure;
 using Asseta.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -117,11 +120,38 @@ using (var scope = app.Services.CreateScope())
     {
         var context = services.GetRequiredService<AssetaDbContext>();
         context.Database.EnsureCreated();
+
+        // Seed default demo user: globalhelcurt14092005@gmail.com / Minhdz2005@
+        var demoEmail = "globalhelcurt14092005@gmail.com";
+        var demoUser = context.Users.FirstOrDefault(u => u.Email == demoEmail);
+        var passwordHasher = services.GetRequiredService<IPasswordHasher>();
+        if (demoUser == null)
+        {
+            var masterKeyVerifier = MasterKeyGenerator.ComputeVerifier("AK-DEMO-2026-ASSETA-VAULT");
+            var newUser = new User(
+                demoEmail,
+                passwordHasher.HashPassword("Minhdz2005@"),
+                "Minh Asseta Demo",
+                masterKeyVerifier,
+                "a1b2c3d4e5f60718293a4b5c6d7e8f90",
+                "0901234567",
+                Guid.Parse("11111111-1111-1111-1111-111111111111"));
+            context.Users.Add(newUser);
+            context.SaveChanges();
+        }
+        else
+        {
+            if (!passwordHasher.VerifyPassword("Minhdz2005@", demoUser.PasswordHash))
+            {
+                demoUser.UpdatePassword(passwordHasher.HashPassword("Minhdz2005@"));
+                context.SaveChanges();
+            }
+        }
     }
     catch (Exception ex)
     {
         var logger = services.GetRequiredService<ILogger<Program>>();
-        logger.LogWarning("PostgreSQL not immediately reachable: {Message}. Check docker-compose status.", ex.Message);
+        logger.LogWarning("PostgreSQL database auto-seed warning: {Message}", ex.Message);
     }
 }
 

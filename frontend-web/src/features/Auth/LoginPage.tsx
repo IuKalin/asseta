@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Lock, Mail, ShieldCheck, ArrowRight, Sparkles, AlertCircle, Loader2 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
+import { getErrorMessage } from '../../utils/errorUtils';
 
 interface LoginPageProps {
   onNavigateToRegister: () => void;
@@ -25,7 +26,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onNavigateToRegister }) =>
     try {
       await login({ email: email.trim(), password });
     } catch (err: any) {
-      const msg = err.response?.data?.message || err.message || 'Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin.';
+      const msg = getErrorMessage(err, 'Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin.');
       setError(msg);
     } finally {
       setIsSubmitting(false);
