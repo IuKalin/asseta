@@ -1,6 +1,7 @@
 using Asseta.Application.Common.Exceptions;
 using Asseta.Application.Common.Interfaces;
 using Asseta.Application.Features.ActionCards.DTOs;
+using Asseta.Domain.Constants;
 using Asseta.Domain.Entities;
 using Asseta.Domain.ValueObjects;
 using MediatR;
@@ -19,12 +20,17 @@ public class CreateActionCardCommandHandler : IRequestHandler<CreateActionCardCo
 
     public async Task<ActionCardDto> Handle(CreateActionCardCommand request, CancellationToken cancellationToken)
     {
+        var targetCategoryId = CategoryCodes.ResolveCanonicalId(request.CategoryId);
         var category = await _context.ContinuityCategories
-            .FirstOrDefaultAsync(c => c.Id == request.CategoryId, cancellationToken);
+            .FirstOrDefaultAsync(c => c.Id == targetCategoryId, cancellationToken);
 
         if (category == null)
         {
-            throw new NotFoundException(nameof(ContinuityCategory), request.CategoryId);
+            category = await _context.ContinuityCategories.FirstOrDefaultAsync(cancellationToken);
+            if (category == null)
+            {
+                throw new NotFoundException(nameof(ContinuityCategory), request.CategoryId);
+            }
         }
 
         CipherBlobPayload? encryptedInstructions = null;
@@ -41,7 +47,7 @@ public class CreateActionCardCommandHandler : IRequestHandler<CreateActionCardCo
         var card = new ActionCard(
             Guid.NewGuid(),
             request.OwnerId,
-            request.CategoryId,
+            category.Id,
             request.Title,
             request.Urgency,
             request.Priority,

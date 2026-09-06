@@ -29,17 +29,17 @@ class _ActionCardFormPageState extends State<ActionCardFormPage> {
 
   late UrgencyStage _selectedUrgency;
   String _selectedPriority = 'CRITICAL';
-  String _selectedCategoryId = 'c1111111-1111-1111-1111-111111111111'; // Financial default
+  String _selectedCategoryId = '018e6e5a-7341-789a-9e12-2d93e1104e01'; // Financial default
   bool _isSubmitting = false;
   String? _errorMessage;
 
   final List<Map<String, String>> _categories = [
-    {'id': 'c1111111-1111-1111-1111-111111111111', 'name': 'Tài chính & Ngân hàng'},
-    {'id': 'c2222222-2222-2222-2222-222222222222', 'name': 'Bất động sản & Tài sản'},
-    {'id': 'c3333333-3333-3333-3333-333333333333', 'name': 'Bảo hiểm & Y tế'},
-    {'id': 'c4444444-4444-4444-4444-444444444444', 'name': 'Vận hành Doanh nghiệp'},
-    {'id': 'c5555555-5555-5555-5555-555555555555', 'name': 'Hồ sơ Pháp lý'},
-    {'id': 'c6666666-6666-6666-6666-666666666666', 'name': 'Gia đình & Người phụ thuộc'},
+    {'id': '018e6e5a-7341-789a-9e12-2d93e1104e01', 'name': 'Tài chính & Ngân hàng'},
+    {'id': '018e6e5a-7341-789a-9e12-2d93e1104e02', 'name': 'Bất động sản & Tài sản'},
+    {'id': '018e6e5a-7341-789a-9e12-2d93e1104e03', 'name': 'Bảo hiểm & Y tế'},
+    {'id': '018e6e5a-7341-789a-9e12-2d93e1104e04', 'name': 'Vận hành Doanh nghiệp'},
+    {'id': '018e6e5a-7341-789a-9e12-2d93e1104e05', 'name': 'Hồ sơ Pháp lý'},
+    {'id': '018e6e5a-7341-789a-9e12-2d93e1104e06', 'name': 'Gia đình & Người phụ thuộc'},
   ];
 
   @override

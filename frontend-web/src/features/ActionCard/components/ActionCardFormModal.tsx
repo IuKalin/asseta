@@ -25,12 +25,12 @@ interface ActionCardFormModalProps {
 }
 
 const DEFAULT_CATEGORIES = [
-  { id: '11111111-1111-1111-1111-111111111111', code: 'FINANCIAL', name: 'Tài chính & Nghĩa vụ tiền tệ' },
-  { id: '22222222-2222-2222-2222-222222222222', code: 'PROPERTY', name: 'Tài sản & Bất động sản' },
-  { id: '33333333-3333-3333-3333-333333333333', code: 'INSURANCE', name: 'Bảo hiểm & Quyền lợi sức khỏe' },
-  { id: '44444444-4444-4444-4444-444444444444', code: 'BUSINESS', name: 'Doanh nghiệp & Quan hệ đối tác' },
-  { id: '55555555-5555-5555-5555-555555555555', code: 'DOCUMENTS', name: 'Hồ sơ & Giấy tờ pháp lý' },
-  { id: '66666666-6666-6666-6666-666666666666', code: 'FAMILY', name: 'Gia đình & Nghĩa vụ cá nhân' },
+  { id: '018e6e5a-7341-789a-9e12-2d93e1104e01', code: 'FINANCIAL', name: 'Tài chính & Nghĩa vụ tiền tệ' },
+  { id: '018e6e5a-7341-789a-9e12-2d93e1104e02', code: 'PROPERTY', name: 'Tài sản & Bất động sản' },
+  { id: '018e6e5a-7341-789a-9e12-2d93e1104e03', code: 'INSURANCE', name: 'Bảo hiểm & Quyền lợi sức khỏe' },
+  { id: '018e6e5a-7341-789a-9e12-2d93e1104e04', code: 'BUSINESS', name: 'Doanh nghiệp & Quan hệ đối tác' },
+  { id: '018e6e5a-7341-789a-9e12-2d93e1104e05', code: 'DOCUMENTS', name: 'Hồ sơ & Giấy tờ pháp lý' },
+  { id: '018e6e5a-7341-789a-9e12-2d93e1104e06', code: 'FAMILY', name: 'Gia đình & Nghĩa vụ cá nhân' },
 ];
 
 export const ActionCardFormModal: React.FC<ActionCardFormModalProps> = ({

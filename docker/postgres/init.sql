@@ -70,12 +70,12 @@ CREATE TABLE IF NOT EXISTS continuity_categories (
 -- Seed Data: 6 Standard Categories
 INSERT INTO continuity_categories (id, code, name_vi, name_en, icon, sort_order)
 VALUES 
-('11111111-1111-1111-1111-111111111111', 'FINANCIAL', 'Tài chính & Nghĩa vụ tiền tệ', 'Financial & Monetary Obligations', 'AccountBalance', 1),
-('22222222-2222-2222-2222-222222222222', 'PROPERTY', 'Tài sản & Bất động sản', 'Real Estate & Tangible Assets', 'Home', 2),
-('33333333-3333-3333-3333-333333333333', 'INSURANCE', 'Bảo hiểm & Quyền lợi sức khỏe', 'Insurance & Health Benefits', 'Security', 3),
-('44444444-4444-4444-4444-444444444444', 'BUSINESS', 'Doanh nghiệp & Quan hệ đối tác', 'Business & Partnership Relations', 'BusinessCenter', 4),
-('55555555-5555-5555-5555-555555555555', 'DOCUMENTS', 'Hồ sơ & Giấy tờ pháp lý', 'Legal Documents & Records', 'Description', 5),
-('66666666-6666-6666-6666-666666666666', 'FAMILY', 'Gia đình & Nghĩa vụ cá nhân', 'Family & Personal Commitments', 'FamilyRestroom', 6)
+('018e6e5a-7341-789a-9e12-2d93e1104e01', 'FINANCIAL', 'Tài chính & Nghĩa vụ tiền tệ', 'Financial & Monetary Obligations', 'AccountBalance', 1),
+('018e6e5a-7341-789a-9e12-2d93e1104e02', 'PROPERTY', 'Tài sản & Bất động sản', 'Real Estate & Tangible Assets', 'Home', 2),
+('018e6e5a-7341-789a-9e12-2d93e1104e03', 'INSURANCE', 'Bảo hiểm & Quyền lợi sức khỏe', 'Insurance & Health Benefits', 'Security', 3),
+('018e6e5a-7341-789a-9e12-2d93e1104e04', 'BUSINESS', 'Doanh nghiệp & Quan hệ đối tác', 'Business & Partnership Relations', 'BusinessCenter', 4),
+('018e6e5a-7341-789a-9e12-2d93e1104e05', 'DOCUMENTS', 'Hồ sơ & Giấy tờ pháp lý', 'Legal Documents & Records', 'Description', 5),
+('018e6e5a-7341-789a-9e12-2d93e1104e06', 'FAMILY', 'Gia đình & Nghĩa vụ cá nhân', 'Family & Personal Commitments', 'FamilyRestroom', 6)
 ON CONFLICT (code) DO NOTHING;
 
 -- Module 1: Continuity Items

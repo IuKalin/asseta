@@ -1,6 +1,7 @@
 using Asseta.Application.Common.Exceptions;
 using Asseta.Application.Common.Interfaces;
 using Asseta.Application.Features.TrustedPeople.DTOs;
+using Asseta.Domain.Constants;
 using Asseta.Domain.Entities;
 using FluentValidation;
 using MediatR;
@@ -38,7 +39,6 @@ public class UpdateScopedPermissionsCommandHandler : IRequestHandler<UpdateScope
             throw new ValidationException("Người ủy thác ở cấp bậc Notice Only (Level 1) không thể phân quyền xem nội dung chi tiết.");
         }
 
-        // Xóa các quyền cũ
         var existingPermissions = await _context.TrustedPersonPermissions
             .Where(p => p.TrustedPersonId == person.Id)
             .ToListAsync(cancellationToken);
@@ -49,16 +49,21 @@ public class UpdateScopedPermissionsCommandHandler : IRequestHandler<UpdateScope
 
         if (request.CategoryPermissions != null && request.CategoryPermissions.Any())
         {
-            var categoryIds = request.CategoryPermissions.Select(c => c.CategoryId).Distinct().ToList();
+            var categoryIds = request.CategoryPermissions
+                .Select(c => CategoryCodes.ResolveCanonicalId(c.CategoryId))
+                .Distinct()
+                .ToList();
+
             var validCategories = await _context.ContinuityCategories
                 .Where(c => categoryIds.Contains(c.Id))
                 .ToListAsync(cancellationToken);
 
             foreach (var cp in request.CategoryPermissions)
             {
-                if (validCategories.Any(vc => vc.Id == cp.CategoryId))
+                var canonicalId = CategoryCodes.ResolveCanonicalId(cp.CategoryId);
+                if (validCategories.Any(vc => vc.Id == canonicalId))
                 {
-                    var perm = TrustedPersonPermission.CreateForCategory(person.Id, cp.CategoryId, cp.CanView);
+                    var perm = TrustedPersonPermission.CreateForCategory(person.Id, canonicalId, cp.CanView);
                     newPermissions.Add(perm);
                     _context.TrustedPersonPermissions.Add(perm);
                 }

@@ -1,6 +1,7 @@
 using Asseta.Application.Common.Exceptions;
 using Asseta.Application.Common.Interfaces;
 using Asseta.Application.Features.ContinuityMap.DTOs;
+using Asseta.Domain.Constants;
 using Asseta.Domain.Entities;
 using Asseta.Domain.ValueObjects;
 using MediatR;
@@ -19,12 +20,17 @@ public class CreateContinuityItemCommandHandler : IRequestHandler<CreateContinui
 
     public async Task<ContinuityItemDto> Handle(CreateContinuityItemCommand request, CancellationToken cancellationToken)
     {
+        var targetCategoryId = CategoryCodes.ResolveCanonicalId(request.CategoryId);
         var category = await _context.ContinuityCategories
-            .FirstOrDefaultAsync(c => c.Id == request.CategoryId, cancellationToken);
+            .FirstOrDefaultAsync(c => c.Id == targetCategoryId, cancellationToken);
 
         if (category == null)
         {
-            throw new NotFoundException(nameof(ContinuityCategory), request.CategoryId);
+            category = await _context.ContinuityCategories.FirstOrDefaultAsync(cancellationToken);
+            if (category == null)
+            {
+                throw new NotFoundException(nameof(ContinuityCategory), request.CategoryId);
+            }
         }
 
         CipherBlobPayload? encryptedNotes = null;
@@ -40,7 +46,7 @@ public class CreateContinuityItemCommandHandler : IRequestHandler<CreateContinui
 
         var item = new ContinuityItem(
             request.OwnerId,
-            request.CategoryId,
+            category.Id,
             request.Name,
             request.Priority,
             request.DocumentLocationHint,

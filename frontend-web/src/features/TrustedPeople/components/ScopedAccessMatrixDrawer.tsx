@@ -13,12 +13,12 @@ interface ScopedAccessMatrixDrawerProps {
 
 // 6 danh mục chuẩn của Asseta
 const DEFAULT_CATEGORIES = [
-  { id: '11111111-1111-1111-1111-111111111111', code: 'FINANCIAL', nameVi: 'Tài chính & Ngân hàng', desc: 'Tài khoản, khoản vay, thẻ tín dụng, nghĩa vụ định kỳ' },
-  { id: '11111111-1111-1111-1111-111111111112', code: 'PROPERTY', nameVi: 'Bất động sản & Xe cộ', desc: 'Nhà ở, căn hộ cho thuê, phương tiện đi lại' },
-  { id: '11111111-1111-1111-1111-111111111113', code: 'INSURANCE', nameVi: 'Bảo hiểm nhân thọ & Sức khỏe', desc: 'Hợp đồng bảo hiểm, quyền lợi bồi thường' },
-  { id: '11111111-1111-1111-1111-111111111114', code: 'BUSINESS', nameVi: 'Vận hành Công ty & Đối tác', desc: 'Doanh nghiệp, khách hàng, nhân sự chủ chốt' },
-  { id: '11111111-1111-1111-1111-111111111115', code: 'DOCUMENTS', nameVi: 'Hồ sơ Pháp lý & Hợp đồng', desc: 'Giấy tờ tài sản, chứng nhận pháp lý' },
-  { id: '11111111-1111-1111-1111-111111111116', code: 'FAMILY', nameVi: 'Gia đình & Người phụ thuộc', desc: 'Học phí con cái, người cần chăm sóc đặc biệt' },
+  { id: '018e6e5a-7341-789a-9e12-2d93e1104e01', code: 'FINANCIAL', nameVi: 'Tài chính & Ngân hàng', desc: 'Tài khoản, khoản vay, thẻ tín dụng, nghĩa vụ định kỳ' },
+  { id: '018e6e5a-7341-789a-9e12-2d93e1104e02', code: 'PROPERTY', nameVi: 'Bất động sản & Xe cộ', desc: 'Nhà ở, căn hộ cho thuê, phương tiện đi lại' },
+  { id: '018e6e5a-7341-789a-9e12-2d93e1104e03', code: 'INSURANCE', nameVi: 'Bảo hiểm nhân thọ & Sức khỏe', desc: 'Hợp đồng bảo hiểm, quyền lợi bồi thường' },
+  { id: '018e6e5a-7341-789a-9e12-2d93e1104e04', code: 'BUSINESS', nameVi: 'Vận hành Công ty & Đối tác', desc: 'Doanh nghiệp, khách hàng, nhân sự chủ chốt' },
+  { id: '018e6e5a-7341-789a-9e12-2d93e1104e05', code: 'DOCUMENTS', nameVi: 'Hồ sơ Pháp lý & Hợp đồng', desc: 'Giấy tờ tài sản, chứng nhận pháp lý' },
+  { id: '018e6e5a-7341-789a-9e12-2d93e1104e06', code: 'FAMILY', nameVi: 'Gia đình & Người phụ thuộc', desc: 'Học phí con cái, người cần chăm sóc đặc biệt' },
 ];
 
 export const ScopedAccessMatrixDrawer: React.FC<ScopedAccessMatrixDrawerProps> = ({
